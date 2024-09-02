@@ -47,12 +47,12 @@ a.dropdown-toggle::after {
   display: none;
 }
 
-input {
+input, textarea {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
 
-input:placeholder-shown {
+input:placeholder-shown, textarea:placeholder-shown {
   font-weight: 300;
   color: var(--color-input-placeholder);
 }

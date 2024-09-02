@@ -68,7 +68,7 @@ a {
   }
 }
 
-input {
+input, textarea {
   box-shadow: none !important;
   &:placeholder-shown {
     font-weight: 300;
@@ -587,6 +587,25 @@ footer {
   cursor: pointer;
 }
 
-.btn{
+.btn {
   border-radius: $border-radius;
 }
+
+.profile-picture-upload{
+  // position: absolute;
+  // height: 100%;
+  // width: 100%;
+}
+
+// .sw-theme-dots {
+//   & > .nav {
+//     .nav-link {
+//       .num {
+//         right: unset;
+//       }
+//       &::after {
+//         right: unset;
+//       }
+//     }
+//   }
+// }

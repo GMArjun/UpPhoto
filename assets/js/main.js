@@ -1,3 +1,7 @@
+// Enable Tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 // Initialize Category Swiper
 // Initialize Category Swiper
 const categorySwiper = new Swiper(".category-swiper .swiper", {
@@ -84,12 +88,15 @@ const customerFeedbackSwiper = new Swiper(".customer-feedback-swiper .swiper", {
 });
 
 // Language change functionality
-$(document).ready(function () {
-  $('input[name="language"]').on("change", function () {
-    if ($(this).val() === "arabic") {
-      $("html").attr("dir", "rtl");
-    } else {
-      $("html").attr("dir", "ltr");
-    }
-  });
+$('input[name="language"]').on("change", function () {
+  if ($(this).val() === "arabic") {
+    $("html").attr("dir", "rtl");
+  } else {
+    $("html").attr("dir", "ltr");
+  }
+});
+
+$("#smartwizard").smartWizard({
+  theme: "dots",
+  justified: true
 });

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upphoto</title>
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
+    <link href="./assets/style/smart_wizard_all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+</head>
+
+<body>
+    <main class="container-xl px-4 px-xl-0">
+        <div class="mt-4">
+            <div id="smartwizard">
+                <ul class="nav nav-progress">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#personal-info">
+                            <div class="num">1</div>
+                            Personal Info
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#professional-info">
+                            <div class="num">2</div>Professional Info
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#account-security">
+                            <div class="num">3</div>Account Security
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="personal-info" class="tab-pane" role="tabpanel">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <h6 class="mb-0">Full Name *</h6>
+                                    <span class="text-muted">Private</span>
+                                </div>
+                                <p class="text-muted fs-7">Ex. John Smith</p>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <input type="password" class="form-control py-2" id="password">
+                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" data-bs-title="Tooltip on top">
+                                        <img src="./assets/img/icons/tooltip-quest.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <input type="password" class="form-control py-2" id="password">
+                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" data-bs-title="Tooltip on top">
+                                        <img src="./assets/img/icons/tooltip-quest.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <h6 class="mb-0">Display Name *</h6>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <input type="password" class="form-control py-2" id="password">
+                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" data-bs-title="Tooltip on top">
+                                        <img src="./assets/img/icons/tooltip-quest.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <h6 class="mb-0">Profile Picture *</h6>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="rounded-3 border rounded-circle d-flex position-relative flex-column align-items-center justify-content-center"
+                                    style="width: 120px; height: 120px; cursor: pointer;">
+                                    <input type="file" id="profile-picture-upload" class="d-none" accept="image/*">
+                                    <label for="profile-picture-upload"
+                                        class="mb-0 position-absolute top-0 bottom-0 h-100 w-100 cursor-pointer d-flex align-items-center justify-content-center">
+                                        <img src="./assets/img/icons/upload.svg" alt="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <h6 class="mb-0">Description *</h6>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <textarea class="form-control" placeholder="Leave a comment here"
+                                    id="floatingTextarea2Disabled" style="height: 100px"></textarea>
+                                    <p class="text-end text-muted fs-7">150/600</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="professional-info" class="tab-pane" role="tabpanel">
+                        <h3>Step 2 Content</h3>
+                        <!-- Add your step 2 content here -->
+                    </div>
+                    <div id="account-security" class="tab-pane" role="tabpanel">
+                        <h3>Step 3 Content</h3>
+                        <!-- Add your step 3 content here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./assets/js/jquery.smartWizard.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
