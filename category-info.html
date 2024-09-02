@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upphoto</title>
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
+    <link href="./assets/style/smart_wizard_all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/category_style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-3 position-sticky top-0">
+        <div class="container-xl px-4 px-xl-0">
+            <nav class="d-flex justify-content-between align-items-center">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+                </a>
+                <nav class="d-flex align-items-center">
+                    <div class="dropdown d-none d-md-flex">
+                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore
+                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                            <li><a class="dropdown-item" href="#">Category 1</a></li>
+                            <li><a class="dropdown-item" href="#">Category 2</a></li>
+                            <li><a class="dropdown-item" href="#">Category 3</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="" data-bs-toggle="modal" data-bs-target="#languageCurrencyModal"><img
+                            src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+                    <a href="#" class="d-none d-md-flex">Become a seller</a>
+                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal" data-bs-target="#signinLoginModal">Sign
+                        in</a>
+                    <a href="#" class="d-none d-md-flex btn btn-outline-dark p-2 px-3" data-bs-toggle="modal"
+                        data-bs-target="#signinLoginModal">Join</a>
+                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+                    </button>
+                </nav>
+            </nav>
+        </div>
+    </header>
+
+    <main class="px-4 px-xl-0">
+        <div class="category-home">
+            <div class="container-xl">
+                <div class="card text-center main-info">
+                    <div class="card-body banner-card">
+                        <div class="banner-card-body">
+                            <div>
+                                <h2 class="card-title">Programming & Tech</h2>
+                                <h6 class="card-text">You think it. A programmer develops it.</h6>
+                            </div>
+                            <a href="#" class="btn btn-outline-dark py-3 px-3">How UpPhoto Works</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-xl">
+                <div class="tech-list position-relative tech-list-swiper">
+                    <div class="d-flex align-items-center justify-content-between gap-4 mb-4">
+                        <h1>Most Popular in Programming & Tech</h1>
+                        <div class="external-buttons d-flex gap-2">
+                            <button class="btn btn-light swiper-button-prev-external">
+                                <img src="./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+                            </button>
+                            <button class="btn btn-light swiper-button-next-external">
+                                <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/shopify.svg" alt="tech-logo" />
+                                    <p>Shopify Developers</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/html.svg" alt="tech-logo" />
+                                    <p>HTML & CSS Developers</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/wordpress.svg" alt="tech-logo" />
+                                    <p>WordPress Developers</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/python.svg" alt="tech-logo" />
+                                    <p>Python Developers</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/wordpress.svg" alt="tech-logo" />
+                                    <p>WordPress Developers</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/wordpress.svg" alt="tech-logo" />
+                                    <p>WordPress Developers</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/python.svg" alt="tech-logo" />
+                                    <p>Python Developers</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="chip-card">
+                                    <img src="./assets/img/icons/category/wordpress.svg" alt="tech-logo" />
+                                    <p>WordPress Developers</p>
+                                </div>
+                            </div>
+                            <!-- Add more services as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-xl explore-tech">
+                <h1>Explore Programming & Tech</h1>
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card">
+                            <img src="./assets/img/category/tech1.png" class="card-img-top custom-img" alt="Card image">
+                            <div class="card-body custom-body">
+                                <h5 class="card-title custom-title">Logo & Brand Identity</h5>
+                                <div>
+                                    <p>Website development</p>
+                                    <p>Website Maintenance</p>
+                                    <p>WordPress</p>
+                                    <p>Shopify</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card">
+                            <img src="./assets/img/category/tech1.png" class="card-img-top custom-img" alt="Card image">
+                            <div class="card-body custom-body">
+                                <h5 class="card-title custom-title">Logo & Brand Identity</h5>
+                                <div>
+                                    <p>Website development</p>
+                                    <p>Website Maintenance</p>
+                                    <p>WordPress</p>
+                                    <p>Shopify</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="card">
+                            <img src="./assets/img/category/tech1.png" class="card-img-top custom-img" alt="Card image">
+                            <div class="card-body custom-body">
+                                <h5 class="card-title custom-title">Logo & Brand Identity</h5>
+                                <div>
+                                    <p>Website development</p>
+                                    <p>Website Maintenance</p>
+                                    <p>WordPress</p>
+                                    <p>Shopify</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-xl tech-guides">
+                <h1>Guides related to Programming & Tech</h1>
+                <div class="tech-guides-container">
+                    <div class="card-container">
+                        <img src="./assets/img/category/guide1.svg" alt="tech-guides" />
+                        <div><span>How to build a WordPress website for your small business</span></div>
+                    </div>
+                    <div class="card-container">
+                        <img src="./assets/img/category/guide2.svg" alt="tech-guides" />
+                        <div><span>How to Find a Web Developer in 2023</span></div>
+                    </div>
+                    <div class="card-container">
+                        <img src="./assets/img/category/guide3.svg" alt="tech-guides" />
+                        <div><span>10 Best Website Builders for Small Business</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-section">
+                <div class="container-xl px-4">
+                    <h2>Programming & Tech FAQs</h2>
+                    <div class="accordion faq-section-accordian" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What is the web programming?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by
+                                    default, until
+                                    the
+                                    collapse plugin adds the appropriate classes that we use to style each element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via
+                                    CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our
+                                    default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is the web programming?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by
+                                    default,
+                                    until
+                                    the collapse plugin adds the appropriate classes that we use to style each
+                                    element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via
+                                    CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our
+                                    default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What is the web programming?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by
+                                    default, until
+                                    the
+                                    collapse plugin adds the appropriate classes that we use to style each element.
+                                    These
+                                    classes control the overall appearance, as well as the showing and hiding via
+                                    CSS
+                                    transitions. You can modify any of this with custom CSS or overriding our
+                                    default
+                                    variables.
+                                    It's also worth noting that just about any HTML can go within the
+                                    <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-xl tech-faq">
+                <h1>Programming & Tech FAQs</h1>
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <span class="badge custom-badge">Convert Website to App</span>
+                    <span class="badge custom-badge">Custom App</span>
+                    <span class="badge custom-badge">Discord server</span>
+                    <span class="badge custom-badge">PHP Programmer</span>
+                    <span class="badge custom-badge">Unity Developer</span>
+                    <span class="badge custom-badge">Discord Chatbot</span>
+                    <span class="badge custom-badge">Shopify Expert</span>
+                    <span class="badge custom-badge">Wix website builder</span>
+                    <span class="badge custom-badge">Minecraft Builders</span>
+                    <span class="badge custom-badge">Book Formating</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                    <span class="badge custom-badge">Custom Landing Page</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="my-5 pt-4 pb-4">
+            <div class="container-xl px-4 px-xl-0">
+                <div class="grid-links">
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Graphics and Design</a></li>
+                            <li><a href="#" class="nav-link mb-3">Digital Marketing</a></li>
+                            <li><a href="#" class="nav-link mb-3">Writing & Translation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Video & Animation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Photography</a></li>
+                            <li><a href="#" class="nav-link">Music and Audio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Careers</a></li>
+                            <li><a href="#" class="nav-link mb-3">Press & News</a></li>
+                            <li><a href="#" class="nav-link mb-3">Partnerships</a></li>
+                            <li><a href="#" class="nav-link mb-3">Privacy Policy</a></li>
+                            <li><a href="#" class="nav-link mb-3">Terms of Service</a></li>
+                            <li><a href="#" class="nav-link">Intellectual Property Claims</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Help & Support</a></li>
+                            <li><a href="#" class="nav-link mb-3">Trust & Safety</a></li>
+                            <li><a href="#" class="nav-link mb-3">Selling on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Buying on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link">Upphoto Forum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Events</a></li>
+                            <li><a href="#" class="nav-link mb-3">Blog</a></li>
+                            <li><a href="#" class="nav-link mb-3">Forum</a></li>
+                            <li><a href="#" class="nav-link mb-3">Community Standards</a></li>
+                            <li><a href="#" class="nav-link mb-3">Podcast</a></li>
+                            <li><a href="#" class="nav-link">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Upphoto Pro</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Studios</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Logo Maker</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link mb-3">Get Inspired</a></li>
+                            <li><a href="#" class="nav-link">ClearVoice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex gap-3 align-items-center justify-content-center justify-content-xl-start">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/img/logo.svg" alt="Upphoto Logo" />
+                        </a>
+                        <p class="mb-0">UpPhoto International Ltd. 2024</p>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-6 text-center text-md-end d-flex justify-content-center justify-content-xl-end pt-xl-0 pt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="Facebook"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/tiktok.svg" alt="Twitter" class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/twitter.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/printest.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/insta.svg" alt="Instagram"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/linkedin.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col pt-xl-0 pt-5">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#languageModal">
+                                    <img src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#currencyModal">
+                                    <img src="./assets/img/icons/rupee.svg" alt="money" />INR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./assets/js/jquery.smartWizard.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
