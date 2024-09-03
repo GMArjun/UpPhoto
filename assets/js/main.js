@@ -87,6 +87,38 @@ const customerFeedbackSwiper = new Swiper(".customer-feedback-swiper .swiper", {
   },
 });
 
+const techListSwiper = new Swiper(".tech-list-swiper .swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  navigation: {
+    nextEl: ".swiper-button-next-external",
+    prevEl: ".swiper-button-prev-external",
+  },
+  loop: false, // Enable continuous looping
+  breakpoints: {
+    400: {
+      slidesPerView: 1.5, // Adjust for smaller screens
+      spaceBetween: 16,
+    },
+    576: {
+      slidesPerView: 2.5, // Adjust for small tablets
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3.5, // Adjust for medium tablets
+      spaceBetween: 24,
+    },
+    992: {
+      slidesPerView: 4.5, // Desired setting for larger screens
+      spaceBetween: 24,
+    },
+    1200: {
+      slidesPerView: 4.5, // Ensure it stays 4.5 on even larger screens
+      spaceBetween: 24,
+    },
+  },
+});
+
 // Language change functionality
 $('input[name="language"]').on("change", function () {
   if ($(this).val() === "arabic") {
