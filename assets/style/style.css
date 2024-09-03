@@ -47,12 +47,14 @@ a.dropdown-toggle::after {
   display: none;
 }
 
-input, textarea {
+input,
+textarea {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
 
-input:placeholder-shown, textarea:placeholder-shown {
+input:placeholder-shown,
+textarea:placeholder-shown {
   font-weight: 300;
   color: var(--color-input-placeholder);
 }
@@ -683,7 +685,6 @@ footer .grid-links {
 
 .main-info {
   border: none;
-  margin-top: 40px;
   background-image: url("../img/category/card-banner.svg");
   background-size: cover;
   background-position: center;
@@ -777,17 +778,22 @@ footer .grid-links {
   width: 100%;
 }
 
-.accordion .accordion-item {
+.faq-section h2 {
+  text-align: center;
+}
+
+.faq-section .accordion .accordion-item {
+  width: 100%;
   border: none;
   /* Remove all borders */
   border-bottom: 1px solid #ddd;
 }
 
-.accordion .accordion-item .accordion-header {
+.faq-section .accordion .accordion-item .accordion-header {
   border: none;
 }
 
-.accordion .accordion-item .accordion-header .accordion-button {
+.faq-section .accordion .accordion-item .accordion-header .accordion-button {
   padding: 0 0 24px 0;
   background-color: #f2f2f2;
   border: none;
@@ -799,15 +805,15 @@ footer .grid-links {
   /* Remove border-radius if you want straight edges */
 }
 
-.accordion .accordion-item .accordion-header .accordion-button:hover {
+.faq-section .accordion .accordion-item .accordion-header .accordion-button:hover {
   background-color: #f2f2f2;
 }
 
-.accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+.faq-section .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background-color: #f2f2f2;
 }
 
-.accordion .accordion-item .accordion-body {
+.faq-section .accordion .accordion-item .accordion-body {
   background-color: #f2f2f2;
   color: #212529;
   padding: 20px;
@@ -945,7 +951,7 @@ footer .grid-links {
 }
 
 .tech-faq .custom-badge {
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   color: #252525;
   padding: 10px;
   font-size: 14px;
