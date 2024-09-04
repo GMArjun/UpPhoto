@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upphoto</title>
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-3 position-sticky top-0">
+        <div class="container-xl px-4 px-xl-0">
+            <nav class="d-flex justify-content-between align-items-center">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+                </a>
+                <nav class="d-flex align-items-center">
+                    <div class="dropdown d-none d-md-flex">
+                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore
+                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                            <li><a class="dropdown-item" href="#">Category 1</a></li>
+                            <li><a class="dropdown-item" href="#">Category 2</a></li>
+                            <li><a class="dropdown-item" href="#">Category 3</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="" data-bs-toggle="modal" data-bs-target="#languageCurrencyModal"><img
+                            src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+                    <a href="#" class="d-none d-md-flex">Become a seller</a>
+                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal" data-bs-target="#signinLoginModal">Sign
+                        in</a>
+                    <a href="#" class="d-none d-md-flex btn btn-outline-dark p-2 px-3" data-bs-toggle="modal"
+                        data-bs-target="#signinLoginModal">Join</a>
+                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+                    </button>
+                </nav>
+            </nav>
+        </div>
+    </header>
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <a href="#">
+                <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav gap-3 flex-column">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore
+                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                            <li><a class="dropdown-item" href="#">Category 1</a></li>
+                            <li><a class="dropdown-item" href="#">Category 2</a></li>
+                            <li><a class="dropdown-item" href="#">Category 3</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#">Become a seller</a></li>
+                <li class="nav-item"><a href="#">Services</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+                <li class="nav-item d-flex gap-3 align-items-center">
+                    <a href=" #" class="btn btn-outline-dark p-2 px-3" data-bs-toggle="modal"
+                        data-bs-target="#signinLoginModal">Sign in</a>
+                    <a href="#" class="btn btn-outline-dark p-2 px-3">Join</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Language & Currency Modal -->
+    <div class="modal fade" id="languageCurrencyModal" tabindex="-1" aria-labelledby="languageCurrencyModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 450px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="languageCurrencyModalLabel">
+                        Select your preferences?
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="language-tab" data-bs-toggle="tab"
+                                data-bs-target="#language" type="button" role="tab" aria-controls="language"
+                                aria-selected="true">
+                                Language
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="currency-tab" data-bs-toggle="tab" data-bs-target="#currency"
+                                type="button" role="tab" aria-controls="currency" aria-selected="false">
+                                Currency
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="language" role="tabpanel"
+                            aria-labelledby="language-tab">
+                            <div class="custom-radio">
+                                <input type="radio" id="english-lang" name="language" value="english" checked />
+                                <label for="english-lang">English</label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="arabic-lang" name="language" value="arabic" />
+                                <label for="arabic-lang">Arabic</label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="french-lang" name="language" value="french" />
+                                <label for="french-lang">French</label>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="currency" role="tabpanel" aria-labelledby="currency-tab">
+                            <div class="custom-radio">
+                                <input type="radio" id="usd-curr" name="currency" value="usd" checked />
+                                <label for="usd-curr">
+                                    <div>USD</div>
+                                    <p class="mb-0">SAR - €</p>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="eur-curr" name="currency" value="eur" />
+                                <label for="eur-curr">
+                                    <div>EUR</div>
+                                    <p class="mb-0">SAR - €</p>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="gbp-curr" name="currency" value="gbp" />
+                                <label for="gbp-curr">
+                                    <div>GBP</div>
+                                    <p class="mb-0">SAR - €</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Language Modal -->
+    <div class="modal fade" id="languageModal" tabindex="-1" aria-labelledby="languageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 450px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="languageModalLabel">
+                        Choose a language
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="pt-3">
+                        <div class="custom-radio">
+                            <input type="radio" id="english" name="language" value="english" checked />
+                            <label for="english">English</label>
+                        </div>
+                        <div class="custom-radio">
+                            <input type="radio" id="arabic" name="language" value="arabic" />
+                            <label for="arabic">Arabic</label>
+                        </div>
+                        <div class="custom-radio">
+                            <input type="radio" id="french" name="language" value="french" />
+                            <label for="french">French</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Currency Modal -->
+    <div class="modal fade" id="currencyModal" tabindex="-1" aria-labelledby="currencyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 450px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="currencyModalLabel">
+                        Choose a Currency
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="pt-3">
+                        <div class="custom-radio">
+                            <input type="radio" id="usd-curre" name="currency" value="usd" checked />
+                            <label for="usd-curre">
+                                <div>USD</div>
+                                <p class="mb-0">SAR - $</p>
+                            </label>
+                        </div>
+                        <div class="custom-radio">
+                            <input type="radio" id="eur-curre" name="currency" value="eur" />
+                            <label for="eur-curre">
+                                <div>EUR</div>
+                                <p class="mb-0">SAR - €</p>
+                            </label>
+                        </div>
+                        <div class="custom-radio">
+                            <input type="radio" id="gbp-curre" name="currency" value="gbp" />
+                            <label for="gbp-curre">
+                                <div>GBP</div>
+                                <p class="mb-0">SAR - £</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signinLoginModal" tabindex="-1" aria-labelledby="signinLoginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="content">
+                                <h4 class="mb-3">Success starts here</h4>
+                                <p class="text-muted font-libre-franklin">Talented freelancers for any project</p>
+                                <p class="text-muted font-libre-franklin">Quality work for any budget</p>
+                                <p class="text-muted font-libre-franklin">Trusted by 4+ million customers globally</p>
+                            </div>
+                            <img src="./assets/img/signinbanner.png" alt="Sign In" class="img-fluid bject-fit-cover" />
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div id="render-createaccount-content" <h2 class="mb-2 pt-xl-3">Create an account</h2>
+                                <p class="text-muted font-libre-franklin mb-5">Already have an account? <a href="#"
+                                        class="text-decoration-underline" id="render-signin">Sign
+                                        in</a></p>
+                                <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                    <img src="./assets/img/icons/Googleico.svg" alt="Google Logo" /> Continue with
+                                    Google
+                                </button>
+                                <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                    <img src="./assets/img/icons/social/email.svg" alt="Google Logo" />Continue with
+                                    Mail
+                                </button>
+                                <p class="text-center">or</p>
+                                <div class="row">
+                                    <div class="col-6 pe-2">
+                                        <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                            <img src="./assets/img/icons/social/apple.svg" alt="Google Logo" /> Apple
+                                        </button>
+                                    </div>
+                                    <div class="col-6 ps-2">
+                                        <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                            <img src="./assets/img/icons/social/facebook (1).svg"
+                                                alt="Google Logo" />Facebook
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="render-signin-content" class="d-none">
+                                <h2 class="mb-2 pt-xl-3">Sign in to your account</h2>
+                                <p class="text-muted font-libre-franklin mb-5">Don't have an account? <a href="#"
+                                        class="text-decoration-underline" id="render-signup">Sign
+                                        up</a></p>
+                                <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                    <img src="./assets/img/icons/Googleico.svg" alt="Google Logo" /> Continue with
+                                    Google
+                                </button>
+                                <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                    <img src="./assets/img/icons/social/email.svg" alt="Google Logo" />Continue with
+                                    Mail
+                                </button>
+                                <p class="text-center">or</p>
+                                <div class="row">
+                                    <div class="col-6 pe-2">
+                                        <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                            <img src="./assets/img/icons/social/apple.svg" alt="Google Logo" /> Apple
+                                        </button>
+                                    </div>
+                                    <div class="col-6 ps-2">
+                                        <button class="btn btn-outline-dark w-100 mb-3 py-2">
+                                            <img src="./assets/img/icons/social/facebook (1).svg"
+                                                alt="Google Logo" />Facebook
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="render-signup-form-1" class="d-none">
+                                <div class="d-flex align-items-center gap-3 cursor-pointer" id="back-btn">
+                                    <img src="./assets/img/icons/back-arror-long.svg" alt="back-arrow"
+                                        class="back-arrow">
+                                    <span>Back</span>
+                                </div>
+                                <h3 class="mb-5 pt-5">Continue with your email or username</h3>
+
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-medium mb-1">Email address</label>
+                                        <input type="email" class="form-control py-2" id="email"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="password" class="form-label fw-medium mb-1">Password</label>
+                                        <input type="password" class="form-control py-2" id="password">
+                                    </div>
+                                    <div class="mb-4 pb-1 d-flex justify-content-end">
+                                        <a href="#" class="text-decoration-underline fs-7 font-libre-franklin">Forgot
+                                            your password?</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 py-2 fw-mediun">Sign in</button>
+                                </form>
+
+                            </div>
+
+                            <div id="render-signup-form-2" class="d-none">
+                                <div class="d-flex align-items-center gap-3 cursor-pointer" id="back-btn">
+                                    <img src="./assets/img/icons/back-arror-long.svg" alt="back-arrow"
+                                        class="back-arrow">
+                                    <span>Back</span>
+                                </div>
+                                <h3 class="mb-2 pt-5">Get your profile started</h3>
+                                <p class="text-muted font-libre-franklin mb-4">Lorem ipsum dolor sit amet consectetur.
+                                    Fames vel et vivamus volutpat dui sed massa tellus. Donec netus at eget dui nisi
+                                    ornare.</p>
+
+                                <form>
+                                    <div class="mb-4">
+                                        <label for="username" class="form-label fw-medium mb-1">Choose a
+                                            username</label>
+                                        <input type="username" class="form-control py-2" id="email"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 py-2 fw-mediun">Create my
+                                        account</button>
+                                </form>
+
+                            </div>
+
+                            <p class="fs-8 text-muted">By joining, you agree to the Fiverr <a href="#"
+                                    class="text-decoration-underline">Terms of Service</a> and to occasionally receive
+                                emails from us. Please read our <a href="#" class="text-decoration-underline">Privacy
+                                    Policy</a> to learn how we use your personal data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Home Page Before Login -->
+    <main class="container-xl px-4 px-xl-0">
+
+        <div class="mt-4 home-intro-card">
+            <div class="card p-4">
+                <div class="card-body">
+                    <h1 class="card-title align-items-center mb-5">
+                        Unlock your potential with expert
+                        <div class="d-inline-flex px-3 align-middle">
+                            <img src="https://avatar.iran.liara.run/public/1" alt="User 1" class="avatar" />
+                            <img src="https://avatar.iran.liara.run/public/girl" alt="User 2" class="avatar" />
+                            <img src="https://avatar.iran.liara.run/public/30" alt="User 3" class="avatar" />
+                        </div>
+                        freelance services.
+                    </h1>
+                    <div class="intro-content-wrapper">
+                        <div class="input-group mb-5">
+                            <input type="text" class="form-control" placeholder="Find the perfect freelancer"
+                                aria-label="Find the perfect freelancer" aria-describedby="button-search" />
+                            <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                                Search
+                            </button>
+                        </div>
+                        <div>
+                            <h6 class="text-center mb-4">Trusted by:</h6>
+                            <div class="d-flex flex-wrap gap-4 justify-content-between align-items-center">
+                                <div class="col">
+                                    <img src="./assets/img/icons/google.svg" alt="Google Logo" />
+                                </div>
+                                <div class="col">
+                                    <img src="./assets/img/icons/meta.svg" alt="Meta Logo" />
+                                </div>
+                                <div class="col">
+                                    <img src="./assets/img/icons/P&G.svg" alt="P&G Logo" />
+                                </div>
+                                <div class="col">
+                                    <img src="./assets/img/icons/netflix.svg" alt="Netflix Logo" />
+                                </div>
+                                <div class="col">
+                                    <img src="./assets/img/icons/paypal.svg" alt="PayPal Logo" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-4">
+            <section>
+                <div class="position-relative category-swiper">
+                    <div class="external-buttons">
+                        <button class="btn btn-light swiper-button-prev-category">
+                            <img src="./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+                        </button>
+                        <button class="btn btn-light swiper-button-next-category">
+                            <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+                        </button>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #ffd700">
+                                        <div class="card-body">
+                                            <div class="card-title">Web Development</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #98fb98">
+                                        <div class="card-body">
+                                            <div class="card-title">Graphic Design</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #87cefa">
+                                        <div class="card-body">
+                                            <div class="card-title">Digital Marketing</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #ffa07a">
+                                        <div class="card-body">
+                                            <div class="card-title">Content Writing</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #dda0dd">
+                                        <div class="card-body">
+                                            <div class="card-title">Video Editing</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #20b2aa">
+                                        <div class="card-body">
+                                            <div class="card-title">SEO Optimization</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #f0e68c">
+                                        <div class="card-body">
+                                            <div class="card-title">Mobile App Development</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #ff69b4">
+                                        <div class="card-body">
+                                            <div class="card-title">UI/UX Design</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #00ced1">
+                                        <div class="card-body">
+                                            <div class="card-title">Data Analysis</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #9370db">
+                                        <div class="card-body">
+                                            <div class="card-title">3D Modeling</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #32cd32">
+                                        <div class="card-body">
+                                            <div class="card-title">Voice Over</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="card" style="background-color: #ff6347">
+                                        <div class="card-body">
+                                            <div class="card-title">Translation Services</div>
+                                            <img src="./assets/img/icons//north_east_arrow.svg"
+                                                alt="north_east_arrow" />
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4">
+                    <div class="position-relative popular-services-swiper">
+                        <div class="d-flex align-items-center justify-content-between gap-4 mb-4 pb-4">
+                            <h1>Popular Services</h1>
+                            <div class="external-buttons d-flex gap-2">
+                                <button class="btn btn-light swiper-button-prev-external">
+                                    <img src="./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+                                </button>
+                                <button class="btn btn-light swiper-button-next-external">
+                                    <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                Website development
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/250" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                Graphic design
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/251" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                Content writing
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/252" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                SEO optimization
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/253" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                Social media management
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/254" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                Video editing
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/255" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                Mobile app development
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/256" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                Data analysis
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/257" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                UI/UX design
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/258" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title fs-5 fw-medium">
+                                                E-commerce solutions
+                                            </div>
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/259" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more services as needed -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4">
+                    <h1 class="mb-4 pb-4">
+                        A whole world of freelance talent at <br />
+                        your fingertips
+                    </h1>
+                    <div class="row freelance-section">
+                        <!-- Card 1 -->
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-4 pb-2">
+                                        <img src="./assets/img/icons/scholar.svg" alt="Item 1" />
+                                    </div>
+                                    <h5 class="card-title">Over 700 categories</h5>
+                                    <p class="card-text fw-light">
+                                        Lorem ipsum dolor sit amet consectetur. Aliquam est
+                                        blandit diam aliquam malesuada convallis ultricies
+                                        habitant commodo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-4 pb-2">
+                                        <img src="./assets/img/icons/stopwatch.svg" alt="Item 1" />
+                                    </div>
+                                    <h5 class="card-title">Over 700 categories</h5>
+                                    <p class="card-text fw-light">
+                                        Lorem ipsum dolor sit amet consectetur. Aliquam est
+                                        blandit diam aliquam malesuada convallis ultricies
+                                        habitant commodo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-4 pb-2">
+                                        <img src="./assets/img/icons/tag.svg" alt="Item 1" />
+                                    </div>
+                                    <h5 class="card-title">Over 700 categories</h5>
+                                    <p class="card-text fw-light">
+                                        Lorem ipsum dolor sit amet consectetur. Aliquam est
+                                        blandit diam aliquam malesuada convallis ultricies
+                                        habitant commodo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-4 pb-2">
+                                        <img src="./assets/img/icons/scholar.svg" alt="Item 1" />
+                                    </div>
+                                    <h5 class="card-title">Over 700 categories</h5>
+                                    <p class="card-text fw-light">
+                                        Lorem ipsum dolor sit amet consectetur. Aliquam est
+                                        blandit diam aliquam malesuada convallis ultricies
+                                        habitant commodo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4">
+                    <div class="position-relative customer-feedback-swiper">
+                        <div class="d-flex align-items-center justify-content-between gap-4 mb-4 pb-4">
+                            <h1>What our Happy user says</h1>
+                            <div class="external-buttons d-flex gap-2">
+                                <button class="btn btn-light swiper-button-prev-feedback">
+                                    <img src="./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+                                </button>
+                                <button class="btn btn-light swiper-button-next-feedback">
+                                    <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="ratio ratio-21x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/257" alt="" />
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6>
+                                                Lorem ipsum dolor sit amet consectetur. Viverra
+                                                accumsan morbi enim orci. Felis risus natoque
+                                                sollicitudin amet ultrices. Feugiat vel amet semper
+                                                ultrices eget massa diam commodo adipiscing.
+                                            </h6>
+                                            <h5 class="card-title mt-4 pt-3 mb-1 fw-bold">
+                                                Tim and Dan Joo, Co-Founders
+                                            </h5>
+                                            <p class="card-text">"Tim and Dan Joo, Co-Founders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="ratio ratio-21x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/257" alt="" />
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6>
+                                                Lorem ipsum dolor sit amet consectetur. Viverra
+                                                accumsan morbi enim orci. Felis risus natoque
+                                                sollicitudin amet ultrices. Feugiat vel amet semper
+                                                ultrices eget massa diam commodo adipiscing.
+                                            </h6>
+                                            <h5 class="card-title mt-4 pt-3 mb-1 fw-bold">
+                                                Tim and Dan Joo, Co-Founders
+                                            </h5>
+                                            <p class="card-text">"Tim and Dan Joo, Co-Founders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="ratio ratio-21x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/257" alt="" />
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6>
+                                                Lorem ipsum dolor sit amet consectetur. Viverra
+                                                accumsan morbi enim orci. Felis risus natoque
+                                                sollicitudin amet ultrices. Feugiat vel amet semper
+                                                ultrices eget massa diam commodo adipiscing.
+                                            </h6>
+                                            <h5 class="card-title mt-4 pt-3 mb-1 fw-bold">
+                                                Tim and Dan Joo, Co-Founders
+                                            </h5>
+                                            <p class="card-text">"Tim and Dan Joo, Co-Founders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="ratio ratio-21x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/257" alt="" />
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6>
+                                                Lorem ipsum dolor sit amet consectetur. Viverra
+                                                accumsan morbi enim orci. Felis risus natoque
+                                                sollicitudin amet ultrices. Feugiat vel amet semper
+                                                ultrices eget massa diam commodo adipiscing.
+                                            </h6>
+                                            <h5 class="card-title mt-4 pt-3 mb-1 fw-bold">
+                                                Tim and Dan Joo, Co-Founders
+                                            </h5>
+                                            <p class="card-text">"Tim and Dan Joo, Co-Founders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="ratio ratio-21x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/257" alt="" />
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6>
+                                                Lorem ipsum dolor sit amet consectetur. Viverra
+                                                accumsan morbi enim orci. Felis risus natoque
+                                                sollicitudin amet ultrices. Feugiat vel amet semper
+                                                ultrices eget massa diam commodo adipiscing.
+                                            </h6>
+                                            <h5 class="card-title mt-4 pt-3 mb-1 fw-bold">
+                                                Tim and Dan Joo, Co-Founders
+                                            </h5>
+                                            <p class="card-text">"Tim and Dan Joo, Co-Founders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="ratio ratio-21x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/257" alt="" />
+                                        </div>
+                                        <div class="card-body pt-4">
+                                            <h6>
+                                                Lorem ipsum dolor sit amet consectetur. Viverra
+                                                accumsan morbi enim orci. Felis risus natoque
+                                                sollicitudin amet ultrices. Feugiat vel amet semper
+                                                ultrices eget massa diam commodo adipiscing.
+                                            </h6>
+                                            <h5 class="card-title mt-4 pt-3 mb-1 fw-bold">
+                                                Tim and Dan Joo, Co-Founders
+                                            </h5>
+                                            <p class="card-text">"Tim and Dan Joo, Co-Founders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4">
+                    <div class="card ratio ratio-21x9 mb-3 relative overflow-hidden our-works">
+                        <video class="w-100 object-fit-cover" src="./assets/video/home.mp4" autoplay muted></video>
+                        <figure class="text-center">
+                            <figcaption class="figure-caption">
+                                Works by UpPhoto
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="my-5 py-4">
+                    <div class="card freelance-banner">
+                        <div class="card-body">
+                            <h1 class="card-title mb-5 fw-bold">Freelance services are just a click away!</h1>
+                            <a href="#" class="btn btn-light fw-bold">Login UpPhoto</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="my-5 pt-4 pb-4">
+            <div class="container-xl px-4 px-xl-0">
+                <div class="grid-links">
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Graphics and Design</a></li>
+                            <li><a href="#" class="nav-link mb-3">Digital Marketing</a></li>
+                            <li><a href="#" class="nav-link mb-3">Writing & Translation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Video & Animation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Photography</a></li>
+                            <li><a href="#" class="nav-link">Music and Audio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Careers</a></li>
+                            <li><a href="#" class="nav-link mb-3">Press & News</a></li>
+                            <li><a href="#" class="nav-link mb-3">Partnerships</a></li>
+                            <li><a href="#" class="nav-link mb-3">Privacy Policy</a></li>
+                            <li><a href="#" class="nav-link mb-3">Terms of Service</a></li>
+                            <li><a href="#" class="nav-link">Intellectual Property Claims</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Help & Support</a></li>
+                            <li><a href="#" class="nav-link mb-3">Trust & Safety</a></li>
+                            <li><a href="#" class="nav-link mb-3">Selling on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Buying on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link">Upphoto Forum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Events</a></li>
+                            <li><a href="#" class="nav-link mb-3">Blog</a></li>
+                            <li><a href="#" class="nav-link mb-3">Forum</a></li>
+                            <li><a href="#" class="nav-link mb-3">Community Standards</a></li>
+                            <li><a href="#" class="nav-link mb-3">Podcast</a></li>
+                            <li><a href="#" class="nav-link">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Upphoto Pro</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Studios</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Logo Maker</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link mb-3">Get Inspired</a></li>
+                            <li><a href="#" class="nav-link">ClearVoice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex gap-3 align-items-center justify-content-center justify-content-xl-start">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/img/logo.svg" alt="Upphoto Logo" />
+                        </a>
+                        <p class="mb-0">UpPhoto International Ltd. 2024</p>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-6 text-center text-md-end d-flex justify-content-center justify-content-xl-end pt-xl-0 pt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="Facebook"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/tiktok.svg" alt="Twitter" class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/twitter.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/printest.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/insta.svg" alt="Instagram"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/linkedin.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col pt-xl-0 pt-5">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#languageModal">
+                                    <img src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#currencyModal">
+                                    <img src="./assets/img/icons/rupee.svg" alt="money" />INR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

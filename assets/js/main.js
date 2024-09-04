@@ -1,6 +1,10 @@
 // Enable Tooltips
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 
 // Initialize Category Swiper
 // Initialize Category Swiper
@@ -119,16 +123,25 @@ const techListSwiper = new Swiper(".tech-list-swiper .swiper", {
   },
 });
 
-// Language change functionality
 $('input[name="language"]').on("change", function () {
-  if ($(this).val() === "arabic") {
-    $("html").attr("dir", "rtl");
-  } else {
-    $("html").attr("dir", "ltr");
-  }
+  const isArabic = $(this).val() === "arabic";
+  const direction = isArabic ? "rtl" : "ltr";
+  const addStylesheet = isArabic
+    ? "bootstrap.rtl.min.css"
+    : "bootstrap.min.css";
+  const removeStylesheet = isArabic
+    ? "bootstrap.min.css"
+    : "bootstrap.rtl.min.css";
+
+  $("html").attr("dir", direction);
+  const newStylesheet = $(
+    `<link rel="stylesheet" href="./assets/style/${addStylesheet}">`
+  );
+  $("head").prepend(newStylesheet);
+  $(`link[href="./assets/style/${removeStylesheet}"]`).remove();
 });
 
 $("#smartwizard").smartWizard({
   theme: "dots",
-  justified: true
+  justified: true,
 });
