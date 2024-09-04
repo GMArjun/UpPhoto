@@ -931,7 +931,7 @@ footer {
         line-height: normal;
         color: #000;
         &.topic-divider {
-          border-bottom: 1px solid #E3E3E3;
+          border-bottom: 1px solid #e3e3e3;
         }
       }
     }
@@ -943,5 +943,80 @@ footer {
       font-weight: 500;
       line-height: normal;
     }
+  }
+}
+
+.explore {
+  margin-top: 80px;
+  margin-bottom: 120px;
+  display: grid;
+  grid-gap: 40px;
+  align-items: center;
+  justify-items: center;
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    grid-gap: 20px;
+  }
+  &__header {
+    text-align: center;
+  }
+  &__heading {
+    color: #005bf1;
+    text-align: center;
+    font-family: "Libre Franklin";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  &__title {
+    font-family: "Libre Franklin";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 24px 0 16px;
+  }
+  &__credits {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    p {
+      color: #686868;
+      font-family: "Libre Franklin";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .divider {
+      width: 1px;
+      height: 15px;
+      background-color: #686868;
+    }
+  }
+  &__image-wrapper img {
+    max-height: 500px;
+    width: auto;
+    box-sizing: border-box;
+    @media screen and (max-width: 768px) {
+      max-height: auto;
+      width: auto;
+    }
+  }
+  &__content {
+    width: 50%;
+    text-align: justify;
+  }
+}
+
+.blog-list {
+  display: grid;
+  align-items: center;
+  max-width: 75%;
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
   }
 }
