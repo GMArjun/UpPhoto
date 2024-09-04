@@ -16,109 +16,114 @@
     <header class="py-3 position-sticky top-0">
         <div class="container-xl px-4 px-xl-0">
             <nav class="d-flex justify-content-between align-items-center">
-                <a class="d-flex align-items-center" href="#">
-                    <img src="./assets/img/logo.svg" class="logo p-2" alt="logo" />
-                    Guides
-                </a>
+                <div class="d-flex gap-5 align-items-center">
+                    <a class="d-flex align-items-center" href="#">
+                        <img src="./assets/img/logo.svg" class="logo p-2" alt="logo" />
+                        Blog
+                    </a>
+                    <form action="">
+                        <div class="d-none d-md-flex input-group">
+                            <input style="width: 300px" type="text" class="form-control pr-4 input-lg"
+                                placeholder="Search by topic or keywords" aria-label="Search by topic or keywords"
+                                aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button style="background-color: #005BF1;color: #fff;" class="btn btn-outline-secondary"
+                                    type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <nav class="d-flex gap-3 align-items-center">
-                    <a href="#" class="d-md-flex">Go to UpPhoto</a>
+                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal">News</a>
+                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal">Businesses</a>
+                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal">Freelancers</a>
+                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal">Case Stuides</a>
                     <a href="#" class="d-md-flex">
                         <img class="guides-profile" src="./assets/img/icons/profile.svg" alt="profile">
                     </a>
+                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+                    </button>
                 </nav>
             </nav>
         </div>
     </header>
 
+    <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <a href="#">
+                <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav gap-3 flex-column">
+                <li class="nav-item"><a href="#">News</a></li>
+                <li class="nav-item"><a href="#">Businesses</a></li>
+                <li class="nav-item"><a href="#">Freelancers</a></li>
+                <li class="nav-item"><a href="#">Case Stuides</a></li>
+                <li class="nav-item">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control pr-4 input-lg"
+                                placeholder="Search by topic or keywords" aria-label="Search by topic or keywords"
+                                aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button style="background-color: #005BF1;color: #fff;" class="btn btn-outline-secondary"
+                                    type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 
     <main>
-        <section class="guides-page container-xl px-4 px-xl-0">
-
-            <div class="guides-page__left">
-                <div class="d-flex flex-column gap-3">
-                    <h4 class="guide-topic">CHOOSE YOUR TOPIC</h4>
-                    <div class="guide-topic-list d-grid gap-4">
-                        <a href="#">Data Guides</a>
-                        <a href="#">Digital Marketing Guides</a>
-                        <a href="#">Business Guides</a>
-                        <a href="#">Music & Audio Guides</a>
-                        <a href="#">Video & Animation Guides</a>
-                        <a href="#">Writing & Copywriting Guides</a>
-                    </div>
-                </div>
-                <div class="d-flex flex-column gap-3">
-                    <h4 class="guide-topic">THE MOST POPULAR GUIDES</h4>
-                    <div class="guide-topic-list d-grid">
-                        <a href="#" class="pb-3 topic-divider">How to start a blog (step-by-step guide)</a>
-                        <a href="#" class="py-3 topic-divider">How to start an Online Business in 11 Steps(+ Best Ideas)</a>
-                        <a href="#" class="py-3 topic-divider">What is digital marketing?</a>
-                        <a href="#" class="py-3 topic-divider">15 Ways to promote your business online</a>
-                        <a href="#" class="py-3">How to turn your skills into a profitable side business</a>
-                    </div>
+        <section class="explore container-xl px-4 px-xl-0">
+            <div class="explore__header">
+                <span class="explore__heading">Explore Graphics & Design Guides</span>
+                <h1 class="explore__title">Top Priorities for Finance Executives</h1>
+                <div class="explore__credits">
+                    <p class="explore__author m-0">by UpPhoto Team</p>
+                    <span class="divider"></span>
+                    <p class="explore__date m-0">June 24, 2024</p>
                 </div>
             </div>
-            
-            <div class="guides-page__right">
-
-                <!-- header content -->
-
-                <div class="guides-page__right-header">
-                    <h1>Business , marketing, and branding guides</h1>
-                    <div class="guides-page__right-description d-grid gap-2">
-                        <h5>Everything you need to know to grow your business</h5>
-                        <span>Practical online resources covering everything you need to know about digital marketing,
-                            video animation, writing and copywriting, programming and tech, graphics and design, and
-                            more!</span>
-                    </div>
-                </div>
-
-                <!-- list of guides  -->
-
-                <div class="guides-list">
-                    <a href="#">
-                        <div class="card d-grid gap-3 border-0">
-                            <img src="./assets/img/guides.png" class="card-img-top custom-img" alt="Card image">
-                            <div class="card-body custom-body p-0">
-                                <h5 class="card-title custom-title">How to Use Midjourney: Step-by-Step Guide To
-                                    Creating</h5>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card d-grid gap-3 border-0">
-                            <img src="./assets/img/guides.png" class="card-img-top custom-img" alt="Card image">
-                            <div class="card-body custom-body p-0">
-                                <h5 class="card-title custom-title">How To Start A Dropshipping Business in 9 Steps</h5>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card d-grid gap-3 border-0">
-                            <img src="./assets/img/guides.png" class="card-img-top custom-img" alt="Card image">
-                            <div class="card-body custom-body p-0">
-                                <h5 class="card-title custom-title">How To Make And Sell Enamel Pins (2024)</h5>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card d-grid gap-3 border-0">
-                            <img src="./assets/img/guides.png" class="card-img-top custom-img" alt="Card image">
-                            <div class="card-body custom-body p-0">
-                                <h5 class="card-title custom-title">How to Use Midjourney: Step-by-Step Guide To
-                                    Creating</h5>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card d-grid gap-3 border-0">
-                            <img src="./assets/img/guides.png" class="card-img-top custom-img" alt="Card image">
-                            <div class="card-body custom-body p-0">
-                                <h5 class="card-title custom-title">How to Use Midjourney: Step-by-Step Guide To
-                                    Creating</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <div class="explore__image-wrapper">
+                <img src="./assets/img/blog-details.png" alt="blog-img" class="explore__image">
+            </div>
+            <div class="explore__content">
+                <p class="explore__description">
+                    A survey of 501 business leaders within the finance sector, completed in partnership with research
+                    firm Censuswide, highlights the finance sector’s ongoing emphasis on adaptability and flexibility
+                    amid market fluctuations and unprecedented industry challenges. 
+                    <br/>
+                    <br/>
+                    Two-thirds of finance leaders say
+                    they are already using freelancers weekly to boost operational flexibility. 
+                    Other key takeaways from the survey highlight shifting sentiments around DeFi and AI implementation.
+                    For example, most executives are optimistic about AI, with 64% expressing positivity and 25% noting
+                    significant efficiency and decision-making gains. 
+                    <br/>
+                    <br/>
+                    Additionally, 78% report productivity improvements
+                    from hybrid models and enhanced employee benefits.
+                    <br/>
+                    <br/>
+                    For finance executives, Q2 is the most stressful quarter by far.
+                    <br/>
+                    <br/>
+                    Financial leaders are ultimately becoming as agile as ever, with nearly 90% of respondents
+                    considering themselves and their respective companies as “adaptive".
+                    <br/>
+                    <br/>
+                    Other key takeaways from the survey highlight shifting sentiments around DeFi and AI implementation.
+                    For example, most executives are optimistic about AI, with 64% expressing positivity and 25% noting
+                    significant efficiency and decision-making gains.
+                </p>
             </div>
         </section>
     </main>

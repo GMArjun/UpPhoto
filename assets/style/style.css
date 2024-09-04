@@ -872,7 +872,7 @@ footer .grid-links {
   color: #000;
 }
 .guides-page__left .guide-topic-list a.topic-divider {
-  border-bottom: 1px solid #E3E3E3;
+  border-bottom: 1px solid #e3e3e3;
 }
 .guides-page__left h4.guide-topic {
   color: #686868;
@@ -881,4 +881,85 @@ footer .grid-links {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+.explore {
+  margin-top: 80px;
+  margin-bottom: 120px;
+  display: grid;
+  grid-gap: 40px;
+  align-items: center;
+  justify-items: center;
+}
+@media screen and (max-width: 768px) {
+  .explore {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    grid-gap: 20px;
+  }
+}
+.explore__header {
+  text-align: center;
+}
+.explore__heading {
+  color: #005bf1;
+  text-align: center;
+  font-family: "Libre Franklin";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.explore__title {
+  font-family: "Libre Franklin";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 24px 0 16px;
+}
+.explore__credits {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+.explore__credits p {
+  color: #686868;
+  font-family: "Libre Franklin";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.explore__credits .divider {
+  width: 1px;
+  height: 15px;
+  background-color: #686868;
+}
+.explore__image-wrapper img {
+  max-height: 500px;
+  width: auto;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .explore__image-wrapper img {
+    max-height: auto;
+    width: auto;
+  }
+}
+.explore__content {
+  width: 50%;
+  text-align: justify;
+}
+
+.blog-list {
+  display: grid;
+  align-items: center;
+  max-width: 75%;
+}
+@media screen and (max-width: 768px) {
+  .blog-list {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
