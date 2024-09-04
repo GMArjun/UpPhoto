@@ -771,4 +771,114 @@ footer .grid-links {
 }
 .tech-faq .custom-badge:hover {
   background-color: #bdbdbd;
+}
+
+.guides-profile {
+  width: 34px;
+  border-radius: 50%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.guides-page {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .guides-page {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+  }
+}
+.guides-page__right-header {
+  display: grid;
+  grid-gap: 40px;
+}
+.guides-page__right h1 {
+  font-family: "Libre Franklin";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.guides-page__right-description {
+  max-width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .guides-page__right-description {
+    max-width: 100%;
+  }
+}
+.guides-page__right-description h5 {
+  font-family: "Libre Franklin";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.guides-page__right-description span {
+  color: #686868;
+  font-family: "Libre Franklin";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.guides-page__right .guides-list {
+  margin: 80px 0 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .guides-page__right .guides-list {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    margin: 40px 0;
+  }
+}
+.guides-page__right .guides-list .custom-img {
+  height: 195px;
+}
+.guides-page__right .guides-list .custom-body h5 {
+  font-family: "Libre Franklin";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 24px */
+}
+.guides-page__left {
+  display: grid;
+  grid-gap: 40px;
+  justify-content: flex-start;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .guides-page__left {
+    grid-gap: 20px;
+  }
+}
+.guides-page__left .guide-topic-list a {
+  font-family: "Libre Franklin";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #000;
+}
+.guides-page__left .guide-topic-list a.topic-divider {
+  border-bottom: 1px solid #E3E3E3;
+}
+.guides-page__left h4.guide-topic {
+  color: #686868;
+  font-family: "Libre Franklin";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }/*# sourceMappingURL=style.css.map */
