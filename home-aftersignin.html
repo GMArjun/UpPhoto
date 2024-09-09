@@ -18,34 +18,144 @@
                 <a href="#">
                     <img src="./assets/img/logo.svg" class="logo" alt="logo" />
                 </a>
-                <nav class="d-flex align-items-center">
-                    <div class="dropdown d-none d-md-flex">
-                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Explore
-                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-                            <li><a class="dropdown-item" href="#">Category 1</a></li>
-                            <li><a class="dropdown-item" href="#">Category 2</a></li>
-                            <li><a class="dropdown-item" href="#">Category 3</a></li>
-                        </ul>
-                    </div>
-                    <a href="#" class="" data-bs-toggle="modal" data-bs-target="#languageCurrencyModal"><img
-                            src="./assets/img/icons/language.svg" alt="language" />Languages</a>
-                    <a href="#" class="d-none d-md-flex">Become a seller</a>
-                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal" data-bs-target="#signinLoginModal">Sign
-                        in</a>
-                    <a href="#" class="d-none d-md-flex btn btn-outline-dark p-2 px-3" data-bs-toggle="modal"
-                        data-bs-target="#signinLoginModal">Join</a>
-                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#sidebar" aria-controls="sidebar">
-                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                        aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                    <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                        Search
                     </button>
+                </div>
+
+                <nav class="d-flex align-items-center flex-shrink-0">
+                    <div class="d-flex flex-shrink-0 align-items-center header-items gap-2">
+                        <a href="#" class="item-img"><img src="./assets/img/icons/notification.svg" alt=""></a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/message.svg" alt=""></a>
+                        <a href="#" class="item-img item-img-heart"><img src="./assets/img/icons/heart-fill.svg"
+                                alt=""></a>
+                        <a href="#" class="">Orders</a>
+                        <div class="dropdown d-none d-md-flex ms-3 profile-dropdown">
+                            <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://avatar.iran.liara.run/public/1" alt="User 1" class="avatar" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                                <li class="px-3 py-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://avatar.iran.liara.run/public/1" alt="User 1"
+                                            class="avatar me-3" style="width: 48px; height: 48px;" />
+                                        <div>
+                                            <h6 class="mb-0">John Doe</h6>
+                                            <small class="text-muted">john.doe@example.com</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="px-3 py-2">
+                                    <button class="btn btn-outline-primary w-100">Switch to Selling</button>
+                                </li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Post a Request</a></li>
+                                <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item d-flex justify-content-between align-items-center"
+                                        href="#">Invite your team <span class="tag">UpPhoto Pro</span></a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </nav>
             </nav>
         </div>
     </header>
+
+    <div class="category-slider">
+        <div class="container-xl px-5 py-3 position-relative">
+            <button class="btn border-0 swiper-button-prev-category-nav"">
+                <img src="./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+            </button>
+            <button class="btn border-0 swiper-button-next-category-nav">
+                <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+            </button>
+            <div class="swiper category-nav-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="category-item">
+                            Hello
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Digital Marketing</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Writing & Translation</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Video & Animation</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">
+                            <div class="dropdown d-none d-md-flex profile-dropdown">
+                                <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    He;;p
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                                    <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Programming & Tech</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Business</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Lifestyle</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Video & Animation</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Music & Audio</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Programming & Tech</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Business</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Lifestyle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Offcanvas Sidebar -->
     <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
         <div class="offcanvas-header">
@@ -138,7 +248,7 @@
                 <h3 class="fw-medium">Based on your browsing history</h3>
                 <a href="#" class="text-dark text-decoration-underline font-libre-franklin">Show all</a>
             </div>
-            <div class="row pt-4 history-tabs">
+            <div class="row gy-4 pt-4 history-tabs">
                 <div class="col-md-3">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link active" id="v-pills-tab1-tab" data-bs-toggle="pill" href="#v-pills-tab1"
@@ -170,30 +280,408 @@
                                             <div class="d-flex align-items-center mb-3">
                                                 <img src="https://avatar.iran.liara.run/public/30"
                                                     class="rounded-circle me-2" width="40" height="40" alt="Avatar 1">
-                                                <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold">Alex</h5>
-                                                <div class="ms-auto">
+                                                <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex
+                                                </h5>
+                                                <div class="ms-auto flex-shrink-0">
                                                     <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
                                                     <img src="./assets/img/icons/rating-filled.svg" alt="">
                                                     <img src="./assets/img/icons/rating-filled.svg" alt="">
                                                     <img src="./assets/img/icons/rating-unfilled.svg" alt="">
                                                 </div>
                                             </div>
-                                            <p class="card-text text-muted fw-light">I will create Spine 2d animations.
+                                            <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                                animations.
                                                 I will do 3d cartoon or anime character for music video</p>
+                                            <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                                <img src="./assets/img/icons/star-filled.svg" alt="">
+                                                <span class="fw-bold">4.2</span>
+                                                <span class="text-muted fw-light fs-7">(20)</span>
+                                            </div>
+                                            <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card gig-card">
+                                        <div class="ratio ratio-16x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/250" alt="" />
+                                        </div>
+                                        <div class="card-body px-0">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="https://avatar.iran.liara.run/public/30"
+                                                    class="rounded-circle me-2" width="40" height="40" alt="Avatar 1">
+                                                <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex
+                                                </h5>
+                                                <div class="ms-auto flex-shrink-0">
+                                                    <span class="tag">UpPhoto Choice</span>
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                                animations.
+                                                I will do 3d cartoon or anime character for music video</p>
+                                            <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                                <img src="./assets/img/icons/star-filled.svg" alt="">
+                                                <span class="fw-bold">4.2</span>
+                                                <span class="text-muted fw-light fs-7">(20)</span>
+                                            </div>
+                                            <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card gig-card">
+                                        <div class="ratio ratio-16x9 relative overflow-hidden">
+                                            <img class="w-full h-full object-fit-cover"
+                                                src="https://picsum.photos/350/250" alt="" />
+                                        </div>
+                                        <div class="card-body px-0">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="https://avatar.iran.liara.run/public/30"
+                                                    class="rounded-circle me-2" width="40" height="40" alt="Avatar 1">
+                                                <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex
+                                                </h5>
+                                                <div class="ms-auto flex-shrink-0">
+                                                    <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                                    <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                                    <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                                    <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                                </div>
+                                            </div>
+                                            <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                                animations.
+                                                I will do 3d cartoon or anime character for music video</p>
+                                            <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                                <img src="./assets/img/icons/star-filled.svg" alt="">
+                                                <span class="fw-bold">4.2</span>
+                                                <span class="text-muted fw-light fs-7">(20)</span>
+                                            </div>
+                                            <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
-
                             <p>Tab 2 content goes here.</p>
                         </div>
                         <div class="tab-pane fade" id="v-pills-tab3" role="tabpanel" aria-labelledby="v-pills-tab3-tab">
-
                             <p>Tab 3 content goes here.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-3">
+            <div class="position-relative gig-services-swiper">
+                <div class="d-flex align-items-center justify-content-between gap-4 mb-4 pb-2">
+                    <h3 class="mb-0 fw-medium">Gigs you may like</h3>
+                </div>
+                <div class="external-buttons">
+                    <button class="btn btn-light swiper-button-prev-gig">
+                        <img src="./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+                    </button>
+                    <button class="btn btn-light swiper-button-next-gig">
+                        <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+                    </button>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 pt-4">
+            <div class="card ratio ratio-21x9 mb-3 relative overflow-hidden our-works">
+                <video class="w-100 object-fit-cover" src="./assets/video/home.mp4" autoplay muted></video>
+                <figure class="text-center">
+                    <figcaption class="figure-caption">
+                        Works by UpPhoto
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="my-5 py-4">
+            <div class="card freelance-banner">
+                <div class="card-body">
+                    <h1 class="card-title mb-5 fw-bold">Freelance services are just a click away!</h1>
+                    <a href="#" class="btn btn-light fw-bold">Login UpPhoto</a>
                 </div>
             </div>
         </div>

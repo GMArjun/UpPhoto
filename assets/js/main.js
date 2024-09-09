@@ -39,6 +39,15 @@ const categorySwiper = new Swiper(".category-swiper .swiper", {
   },
 });
 
+const categoryNavSwiper = new Swiper(".category-nav-swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 40,
+  navigation: {
+    nextEl: ".swiper-button-next-category-nav",
+    prevEl: ".swiper-button-prev-category-nav",
+  },
+});
+
 // Initialize Popular Services Swiper
 const popularServicesSwiper = new Swiper(".popular-services-swiper .swiper", {
   slidesPerView: "auto",
@@ -118,6 +127,33 @@ const techListSwiper = new Swiper(".tech-list-swiper .swiper", {
     },
     1200: {
       slidesPerView: 4.5, // Ensure it stays 4.5 on even larger screens
+      spaceBetween: 24,
+    },
+  },
+});
+
+const gigServicesSwiper = new Swiper(".gig-services-swiper .swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  navigation: {
+    nextEl: ".swiper-button-next-gig",
+    prevEl: ".swiper-button-prev-gig",
+  },
+  breakpoints: {
+    400: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    992: {
+      slidesPerView: 4,
       spaceBetween: 24,
     },
   },
