@@ -1064,9 +1064,8 @@ main {
 
 .faq-section .accordion .accordion-item .accordion-body {
   background-color: #f2f2f2;
-  color: #212529;
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 0px;
+  padding-bottom: 20px;
 }
 
 .tech-guides {
@@ -1178,6 +1177,10 @@ main {
   /* Maintains the aspect ratio while cropping the image */
 }
 
+.explore-tech .custom-body {
+  padding: 16px 0px;
+}
+
 .explore-tech .custom-body div {
   display: -ms-grid;
   display: grid;
@@ -1189,8 +1192,22 @@ main {
   margin: 0;
 }
 
+.explore-tech .custom-body div a {
+  padding: 14px 16px;
+  color: #000;
+  background-image: url("../img/icons/north_east_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+  background-size: 0px;
+}
+
+.explore-tech .custom-body div a:hover {
+  background-color: var(--color-border);
+  background-size: 20px;
+}
+
 .explore-tech .custom-title {
-  margin: 8px 0 24px;
+  padding: 16px;
 }
 
 .tech-faq {
