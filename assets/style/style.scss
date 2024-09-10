@@ -72,6 +72,10 @@ a {
   }
 }
 
+.card{
+  border-color: #E3E3E3;
+}
+
 input,
 textarea {
   box-shadow: none !important;
@@ -1359,6 +1363,35 @@ main {
   }
 }
 
+.gig-draft-card {
+  background-color: #fff;
+  border: none;
+  .ratio {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    .favourite-checkbox {
+      z-index: 1;
+      right: 10px;
+      top: 10px;
+      left: unset;
+      height: unset;
+      width: unset;
+    }
+  }
+  .card-text {
+    line-height: 20px;
+  }
+  .tag {
+    border-radius: 4px;
+    background: linear-gradient(90deg, #2521ff 0%, #661499 100%);
+    color: #fff;
+    font-size: 14px;
+    padding: 4px;
+    font-weight: 600;
+  }
+}
+
 .gig-services-swiper {
   .swiper-button-prev-gig,
   .swiper-button-next-gig {
@@ -1385,7 +1418,7 @@ main {
   border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 108px;
-  z-index: 100;
+  z-index: 101;
   background-color: #fff;
   & > .container-xl {
     &::before {
@@ -1427,7 +1460,7 @@ main {
     background-color: #fff !important;
   }
   .swiper-button-disabled {
-    display: none;
+    opacity: 0.4;
   }
   .category-nav-swiper {
     .swiper-slide {
@@ -1443,6 +1476,7 @@ main {
   }
   .dropdown-menu {
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06);
+    z-index: 1000; // Added a default z-index value
     border-radius: $border-radius;
     min-width: 800px;
     padding: 24px;
@@ -1477,27 +1511,30 @@ main {
   .toolbar-bottom {
     padding: 0px;
     text-align: left;
-    .sw-btn-next{
+    .sw-btn-next {
       min-width: 150px;
     }
   }
-  table{
-    thead{
-      tr{
-        th{
-          background-color: #F2F2F2;
+  table {
+    thead {
+      tr {
+        th {
+          background-color: #f2f2f2;
         }
       }
     }
-    th{
+    th {
       font-weight: 400;
     }
   }
 }
 
-.nice-select{
+.nice-select {
   float: unset;
-  .list{
+  .current {
+    font-size: 16px;
+  }
+  .list {
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     margin-top: 20px;
@@ -1505,7 +1542,7 @@ main {
 }
 .nice-select.open .list {
   width: 100%;
-  li{
+  li {
     background-color: #fff !important;
   }
 }
@@ -1514,11 +1551,51 @@ hr {
   border-color: #a8aaab;
 }
 
-.sw>.tab-content{
+.sw > .tab-content {
   height: auto !important;
 }
 
-.assets-box{
+.assets-box {
   padding: 10px;
   border: 1px solid #dee2e6;
+}
+
+.card-tabs {
+  padding: 0px 24px;
+  .nav-tabs {
+    display: flex;
+    gap: 42px;
+    border: none;
+  }
+  .nav-link {
+    padding: 19px 0px;
+    border-bottom: 4px solid transparent;
+    font-size: 14px;
+    &:hover {
+      border: 0;
+    }
+    &.active {
+      border-bottom: 4px solid #005bf1;
+    }
+  }
+}
+
+.add-gig-card {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 4px;
+  .menu-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  .share-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }

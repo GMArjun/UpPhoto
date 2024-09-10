@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Upphoto</title>
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
+    <link href="./assets/style/smart_wizard_all.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <link rel="stylesheet" href="./assets/style/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-3 position-sticky top-0">
+        <div class="container-xl px-4 px-xl-0">
+            <nav class="d-flex justify-content-between align-items-center">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+                </a>
+
+                <div class="input-group d-none d-md-flex">
+                    <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                        aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                    <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                        Search
+                    </button>
+                </div>
+
+                <nav class="d-flex align-items-center flex-shrink-0">
+                    <div class="d-flex flex-shrink-0 align-items-center header-items gap-1 gap-md-2">
+                        <a href="#" class="item-img"><img src="./assets/img/icons/notification.svg" alt=""></a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/message.svg" alt=""></a>
+                        <a href="#" class="item-img item-img-heart"><img src="./assets/img/icons/heart-fill.svg"
+                                alt=""></a>
+                        <a href="#" class="d-none d-md-flex">Orders</a>
+                        <div class="dropdown ms-1 ms-md-3 profile-dropdown">
+                            <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://avatar.iran.liara.run/public/1" alt="User 1" class="avatar" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                                <li class="px-3 py-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://avatar.iran.liara.run/public/1" alt="User 1"
+                                            class="avatar me-3" style="width: 48px; height: 48px;" />
+                                        <div>
+                                            <h6 class="mb-0">John Doe</h6>
+                                            <small class="text-muted">john.doe@example.com</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="px-3 py-2">
+                                    <button class="btn btn-outline-primary w-100">Switch to Selling</button>
+                                </li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Post a Request</a></li>
+                                <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item d-flex justify-content-between align-items-center"
+                                        href="#">Invite your team <span class="tag">UpPhoto Pro</span></a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+                    </button>
+                </nav>
+            </nav>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pt-3 d-flex d-md-none">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                    aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                    Search
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="category-slider d-none d-md-flex">
+        <div class="container-xl px-5 py-3 position-relative">
+            <button class="btn border-0 swiper-button-prev-category-nav"">
+                <img src=" ./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+            </button>
+            <button class="btn border-0 swiper-button-next-category-nav">
+                <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+            </button>
+            <div class="swiper category-nav-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="dropdown">
+                            <div class="category-item" data-bs-offset="0,24" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Writing & Translation
+                            </div>
+                            <ul class="dropdown-menu font-libre-franklin">
+                                <div class="row">
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Video & Animation</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Allow</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Programming & Tech</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Business</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Lifestyle</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Video & Animation</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Music & Audio</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Programming & Tech</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Business</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Lifestyle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container-xl px-4 px-xl-0">
+            <div class="profile-page">
+                <div class="row mt-0 mb-5 gy-5">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3">
+                                    <img src="https://avatar.iran.liara.run/public/30"" alt=" Profile Image"
+                                        class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                                </div>
+                                <h5 class="card-title mb-1 fs-7">
+                                    John Doe
+                                    <a href="#" class="text-muted ms-2">
+                                        <img src="./assets/img/icons/pencil_new.svg" alt="">
+                                    </a>
+                                    <span class="badge text-bg-secondary fs-7 ms-2">New</span>
+                                </h5>
+                                <p class="card-text text-muted mb-3 fs-7">johndoe@example.com</p>
+                                <a href="#" class="btn btn-outline-primary mb-3 w-100">Preview Fiverr Profile</a>
+                                <hr>
+                                <div class="text-start mt-3">
+                                    <p class="mb-1 d-flex gap-2"><img src="./assets/img/icons/user.svg" alt="">
+                                        <span class="me-auto">From</span> India
+                                    </p>
+                                    <p class="mb-0 d-flex gap-2"><img src="./assets/img/icons/location-pin.svg" alt="">
+                                        <span class="me-auto">Member since</span> Jul 2024
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mt-5">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="card-title mb-0">Description</h6>
+                                    <a href="#" class="text-primary fs-7">
+                                        Edit Description
+                                    </a>
+                                </div>
+                                <p class="text-muted">
+                                    Lorem ipsum dolor sit amet consectetur. Fames vel et vivamus volutpat dui sed massa
+                                    tellus. Donec netus at eget dui nisi ornare. Lobortis arcu mattis egestas risus at
+                                    amet mi. Sagittis aliquam integer tortor ut pellentesque dolor suspendisse.
+                                </p>
+                                <hr class="my-4">
+                                <h6 class="card-title mb-2">Languages</h6>
+                                <div class="bg-light rounded-2 p-4">
+                                    <input type="text" class="form-control py-2 mb-3" placeholder="Add Language">
+                                    <select class="w-100">
+                                        <option data-display="Language Level">Language Level</option>
+                                        <option value="1">Beginner</option>
+                                        <option value="2">Intermediate</option>
+                                        <option value="3">Fluent</option>
+                                        <option value="4">Native</option>
+                                    </select>
+                                    <hr>
+                                    <div class="d-flex gap-3">
+                                        <button class="btn btn-outline-primary w-100">Cancel</button>
+                                        <button class="btn btn-primary w-100">Add</button>
+                                    </div>
+                                </div>
+                                <p class="mb-0 mt-3">Tamil - <span class="text-secondary">Native</span></p>
+                                <p class="mb-0">English - <span class="text-secondary">Fluent</span></p>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="card-title mb-0">Skills</h6>
+                                    <a href="#" class="text-primary fs-7">
+                                        Add New
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="border p-2 rounded-5 px-3">Mobile UI design</span>
+                                    <span class="border p-2 rounded-5 px-3">A/B Testing</span>
+                                </div>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="card-title mb-0">Education</h6>
+                                    <a href="#" class="text-primary fs-7">
+                                        Add New
+                                    </a>
+                                </div>
+                                <div class="fs-7">
+                                    <p class="mb-0">Certification - UX design</p>
+                                    <p class="text-secondary">Kamaraj university, Madurai, Tamil nadu, India.</p>
+                                </div>
+                                <hr class="my-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="card-title mb-0">Education</h6>
+                                    <a href="#" class="text-primary fs-7">
+                                        Add New
+                                    </a>
+                                </div>
+                                <div class="fs-7">
+                                    <p class="mb-0">Certification</p>
+                                    <p class="text-secondary">Google certificatio, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <h6 class="d-flex align-items-center gap-2"> <img src="./assets/img/icons/info.svg" alt=""> This
+                            is your profile when ordering services.</h6>
+                        <p class="text-secondary ms-4 fs-7">For your freelancer profile click <a href="#"
+                                class="text-dark fw-bold">here.</a></p>
+
+                        <div class="card mt-5">
+                            <div class="card-body p-4">
+                                <h6 class="card-title mb-0">Reviews from freelancers</h6>
+                                <hr class="my-4">
+                                <div class="media d-flex align-items-start mb-4">
+                                    <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-3"
+                                        width="48" height="48" alt="Reviewer Avatar">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1">John Doe</h6>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <img src="https://flagcdn.com/w20/us.png" width="20" height="15"
+                                                alt="US flag" class="me-2">
+                                            <span class="text-muted fs-7">United States</span>
+                                        </div>
+                                        <div class="star-rating mb-2 d-flex align-items-center gap-1">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <span class="ms-2 text-muted fs-7">5</span>
+                                            <span class="text-light mx-2">|</span>
+                                            <span class="fs-7 text-secondary">1 week ago</span>
+                                        </div>
+                                        <p class="mb-0 text-secondary fs-7">I have bought countless things on fiverr,
+                                            this is by far the best value for money I've ever gotten. A
+                                            professional logo and brand identity with 4 revisions for only $360 AUD is
+                                            INSANE. This is the best
+                                            experience I have ever had on fiverr. I didn't know what I wanted so used
+                                            all 4 revisions to get the most
+                                            out of the package, and at every step of the way they blew me away. HIGHLY
+                                            RECOMMEND!!!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card card-tabs mt-4">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">ACTIVE GIGS</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                        aria-controls="profile-tab-pane" aria-selected="false">DRAFTS</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content mt-4" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="card add-gig-card">
+                                            <img src="./assets/img/icons/Plus-big.svg" height="70" width="70" alt="">
+                                            <img src="./assets/img/icons/menu_horizontal.svg" width="24" height="17"
+                                                class="menu-icon cursor-pointer" alt="">
+                                            <div>Create a new Gig</div>
+                                            <img src="./assets/img/icons/share.svg" width="24" height="17"
+                                                class="share-icon cursor-pointer" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="card gig-draft-card">
+                                            <div class="ratio ratio-16x9 relative overflow-hidden">
+                                                <img class="w-full h-full object-fit-cover"
+                                                    src="https://picsum.photos/350/250" alt="" />
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text text-muted fw-light mb-2 fs-7">I will create Spine
+                                                    2d
+                                                    animations.
+                                                    I will do 3d cartoon or anime character for music video</p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="dropdown me-auto">
+                                                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#"
+                                                            role="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <img style="transform: none;" src="./assets/img/icons/menu_horizontal.svg" alt="">
+                                                        </a>
+                                                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">More</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <span class="fs-8 text-secondary me-1 ">STARTING AT</span> <span>$20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-5">
+                            <div class="card-body p-4">
+                                <div class="col-3">
+                                    <select>
+                                        <option data-display="Select Type">Select Type</option>
+                                        <option value="1">Review as Buyer</option>
+                                        <option value="2">Review as Seller</option>
+                                    </select>
+                                </div>
+                                <hr class="my-4">
+                                <div class="media d-flex align-items-start mb-4">
+                                    <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-3"
+                                        width="48" height="48" alt="Reviewer Avatar">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1">John Doe</h6>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <img src="https://flagcdn.com/w20/us.png" width="20" height="15"
+                                                alt="US flag" class="me-2">
+                                            <span class="text-muted fs-7">United States</span>
+                                        </div>
+                                        <div class="star-rating mb-2 d-flex align-items-center gap-1">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <img src="./assets/img/icons/star-blue-filled.svg" alt="">
+                                            <span class="ms-2 text-muted fs-7">5</span>
+                                            <span class="text-light mx-2">|</span>
+                                            <span class="fs-7 text-secondary">1 week ago</span>
+                                        </div>
+                                        <p class="mb-0 text-secondary fs-7">I have bought countless things on fiverr,
+                                            this is by far the best value for money I've ever gotten. A
+                                            professional logo and brand identity with 4 revisions for only $360 AUD is
+                                            INSANE. This is the best
+                                            experience I have ever had on fiverr. I didn't know what I wanted so used
+                                            all 4 revisions to get the most
+                                            out of the package, and at every step of the way they blew me away. HIGHLY
+                                            RECOMMEND!!!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </main>
+
+
+    <footer>
+        <div class="my-5 pt-4 pb-4">
+            <div class="container-xl px-4 px-xl-0">
+                <div class="grid-links">
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Graphics and Design</a></li>
+                            <li><a href="#" class="nav-link mb-3">Digital Marketing</a></li>
+                            <li><a href="#" class="nav-link mb-3">Writing & Translation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Video & Animation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Photography</a></li>
+                            <li><a href="#" class="nav-link">Music and Audio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Careers</a></li>
+                            <li><a href="#" class="nav-link mb-3">Press & News</a></li>
+                            <li><a href="#" class="nav-link mb-3">Partnerships</a></li>
+                            <li><a href="#" class="nav-link mb-3">Privacy Policy</a></li>
+                            <li><a href="#" class="nav-link mb-3">Terms of Service</a></li>
+                            <li><a href="#" class="nav-link">Intellectual Property Claims</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Help & Support</a></li>
+                            <li><a href="#" class="nav-link mb-3">Trust & Safety</a></li>
+                            <li><a href="#" class="nav-link mb-3">Selling on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Buying on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link">Upphoto Forum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Events</a></li>
+                            <li><a href="#" class="nav-link mb-3">Blog</a></li>
+                            <li><a href="#" class="nav-link mb-3">Forum</a></li>
+                            <li><a href="#" class="nav-link mb-3">Community Standards</a></li>
+                            <li><a href="#" class="nav-link mb-3">Podcast</a></li>
+                            <li><a href="#" class="nav-link">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Upphoto Pro</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Studios</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Logo Maker</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link mb-3">Get Inspired</a></li>
+                            <li><a href="#" class="nav-link">ClearVoice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex gap-3 align-items-center justify-content-center justify-content-xl-start">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/img/logo.svg" alt="Upphoto Logo" />
+                        </a>
+                        <p class="mb-0">UpPhoto International Ltd. 2024</p>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-6 text-center text-md-end d-flex justify-content-center justify-content-xl-end pt-xl-0 pt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="Facebook"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/tiktok.svg" alt="Twitter" class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/twitter.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/printest.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/insta.svg" alt="Instagram"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/linkedin.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col pt-xl-0 pt-5">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#languageModal">
+                                    <img src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#currencyModal">
+                                    <img src="./assets/img/icons/rupee.svg" alt="money" />INR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./assets/js/jquery.smartWizard.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+    <script>
+        $("#smartwizard").smartWizard({
+            theme: "dots",
+            justified: true,
+            lang: {
+                next: 'Continue',
+                previous: 'Back'
+            },
+            toolbar: {
+                position: 'bottom', // none|top|bottom|both
+                showNextButton: true, // show/hide a Next button
+                showPreviousButton: false, // show/hide a Previous button
+            },
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.backgroundColor = '#FAFAFA';
+        });
+    </script>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
