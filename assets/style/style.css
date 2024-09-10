@@ -32,6 +32,10 @@ label, .home-intro-card .card .card-title, .category-swiper .card .card-body .ca
   font-family: "Inter", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -66,6 +70,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -73,6 +81,12 @@ header {
   background-color: var(--color-background-light);
   border-bottom: 1px solid var(--color-border);
   z-index: 999;
+}
+
+@media (max-width: 767px) {
+  header {
+    min-height: auto;
+  }
 }
 
 header .input-group {
@@ -92,7 +106,13 @@ header .input-group button {
 }
 
 header .input-group input {
-  max-width: 600px;
+  padding-left: 24px;
+}
+
+@media (min-width: 767px) {
+  header .input-group input {
+    max-width: 600px;
+  }
 }
 
 header nav {
@@ -170,6 +190,35 @@ header .profile-dropdown .dropdown-menu .tag {
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+}
+
+.sidebar .accordion {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.sidebar .accordion .accordion-item {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  padding: 8px 0px;
+}
+
+.sidebar .accordion .accordion-body {
+  padding-bottom: 0px;
+}
+
+.sidebar .accordion .accordion-button {
+  padding: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+
+.sidebar .accordion a {
+  font-size: 16px;
 }
 
 .home-intro-card .card {
@@ -819,6 +868,26 @@ footer .grid-links {
   position: absolute;
   right: 0px;
   top: 0px;
+}
+
+.favorite-checkbox {
+  display: none;
+}
+
+.favorite-checkbox + label {
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/heart.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: background-image 0.3s ease;
+  transition: background-image 0.3s ease;
+}
+
+.favorite-checkbox:checked + label {
+  background-image: url("../img/icons/heart-fill.svg");
 }
 
 .fw-extrabold {
@@ -1490,6 +1559,15 @@ main {
   position: relative;
 }
 
+.gig-card .ratio .favourite-checkbox {
+  z-index: 1;
+  right: 10px;
+  top: 10px;
+  left: unset;
+  height: unset;
+  width: unset;
+}
+
 .gig-card .card-text {
   line-height: 20px;
 }
@@ -1539,16 +1617,46 @@ main {
   background-color: #fff;
 }
 
+.category-slider > .container-xl::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.category-slider > .container-xl::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.category-slider .swiper {
+  overflow: visible;
+}
+
 .category-slider .swiper-button-prev-category-nav {
   position: absolute;
-  left: -10px;
+  left: 0px;
   top: 9px;
+  z-index: 10;
+  background-color: #fff !important;
 }
 
 .category-slider .swiper-button-next-category-nav {
   position: absolute;
-  right: -10px;
+  right: 0px;
   top: 9px;
+  z-index: 10;
+  background-color: #fff !important;
 }
 
 .category-slider .swiper-button-disabled {
@@ -1565,5 +1673,25 @@ main {
 
 .category-slider .category-nav-swiper .category-item {
   font-family: "Libre Franklin", sans-serif;
+  cursor: pointer;
+}
+
+.category-slider .dropdown-menu {
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  min-width: 800px;
+  padding: 24px;
+  border: none;
+}
+
+.category-slider .dropdown-menu .dropdown-item {
+  padding: 0px;
+  color: var(--color-text-muted);
+  background-color: transparent;
+}
+
+.category-slider .dropdown-menu .dropdown-item:hover {
+  color: var(--color-primary);
 }
 /*# sourceMappingURL=style.css.map */

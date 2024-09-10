@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Upphoto</title>
     <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
@@ -19,7 +19,7 @@
                     <img src="./assets/img/logo.svg" class="logo" alt="logo" />
                 </a>
 
-                <div class="input-group">
+                <div class="input-group d-none d-md-flex">
                     <input type="text" class="form-control" placeholder="What service you are looking for today?"
                         aria-label="What service you are looking for today?" aria-describedby="button-search" />
                     <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
@@ -28,13 +28,13 @@
                 </div>
 
                 <nav class="d-flex align-items-center flex-shrink-0">
-                    <div class="d-flex flex-shrink-0 align-items-center header-items gap-2">
+                    <div class="d-flex flex-shrink-0 align-items-center header-items gap-1 gap-md-2">
                         <a href="#" class="item-img"><img src="./assets/img/icons/notification.svg" alt=""></a>
                         <a href="#" class="item-img"><img src="./assets/img/icons/message.svg" alt=""></a>
                         <a href="#" class="item-img item-img-heart"><img src="./assets/img/icons/heart-fill.svg"
                                 alt=""></a>
-                        <a href="#" class="">Orders</a>
-                        <div class="dropdown d-none d-md-flex ms-3 profile-dropdown">
+                        <a href="#" class="d-none d-md-flex">Orders</a>
+                        <div class="dropdown ms-1 ms-md-3 profile-dropdown">
                             <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="https://avatar.iran.liara.run/public/1" alt="User 1" class="avatar" />
@@ -83,16 +83,28 @@
                             </ul>
                         </div>
                     </div>
-
+                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+                    </button>
                 </nav>
             </nav>
         </div>
+        <div class="container-xl px-4 px-xl-0 pt-3 d-flex d-md-none">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                    aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                    Search
+                </button>
+            </div>
+        </div>
     </header>
 
-    <div class="category-slider">
+    <div class="category-slider d-none d-md-flex">
         <div class="container-xl px-5 py-3 position-relative">
             <button class="btn border-0 swiper-button-prev-category-nav"">
-                <img src="./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+                <img src=" ./assets/img/icons/chevron-left.svg" alt="chevron-left" />
             </button>
             <button class="btn border-0 swiper-button-next-category-nav">
                 <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
@@ -100,32 +112,80 @@
             <div class="swiper category-nav-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="category-item">
-                            Hello
+                        <div class="dropdown">
+                            <div class="category-item" data-bs-offset="0,24" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Writing & Translation
+                            </div>
+                            <ul class="dropdown-menu font-libre-franklin">
+                                <div class="row">
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Digital Marketing</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Writing & Translation</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="category-item">Video & Animation</div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="category-item">
-                            <div class="dropdown d-none d-md-flex profile-dropdown">
-                                <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    He;;p
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-                                    <li><a class="dropdown-item" href="#">Become a seller</a></li>
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <div class="category-item">Allow</div>
                     </div>
                     <div class="swiper-slide">
                         <div class="category-item">Programming & Tech</div>
@@ -162,33 +222,106 @@
             <a href="#">
                 <img src="./assets/img/logo.svg" class="logo" alt="logo" />
             </a>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <ul class="nav gap-3 flex-column">
-                <li class="nav-item">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Explore
-                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-                            <li><a class="dropdown-item" href="#">Category 1</a></li>
-                            <li><a class="dropdown-item" href="#">Category 2</a></li>
-                            <li><a class="dropdown-item" href="#">Category 3</a></li>
-                        </ul>
+            <h4>Services</h4>
+            <div class="accordion" id="servicesAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Programming & Tech
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Art & Illustration</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li class="nav-item"><a href="#">Become a seller</a></li>
-                <li class="nav-item"><a href="#">Services</a></li>
-                <li class="nav-item"><a href="#">Contact</a></li>
-                <li class="nav-item d-flex gap-3 align-items-center">
-                    <a href=" #" class="btn btn-outline-dark p-2 px-3" data-bs-toggle="modal"
-                        data-bs-target="#signinLoginModal">Sign in</a>
-                    <a href="#" class="btn btn-outline-dark p-2 px-3">Join</a>
-                </li>
-            </ul>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Digital Marketing
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Art & Illustration</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Video & Animation
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Art & Illustration</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -205,7 +338,8 @@
                         <div class="col-lg-6">
                             <div class="card">
                                 <p class="fs-8 fw-bold">RECOMMENDED FOR YOU</p>
-                                <div class="d-flex align-items-center">
+                                <div
+                                    class="d-flex flex-column flex-md-row gap-md-0 text-md-start text-center gap-3 align-items-center">
                                     <div class="flex-shrink-0">
                                         <img src="./assets/img/magic-wand.svg" alt="Service 1" class="rounded-circle"
                                             width="64" height="64">
@@ -214,7 +348,7 @@
                                         <h6 class="mt-0 mb-1">Get matched with freelancers</h6>
                                         <p class="fs-7 mb-0">Create a brief and get custom offers</p>
                                     </div>
-                                    <div class="ms-auto">
+                                    <div class="ms-md-auto">
                                         <a href="#" class="btn btn-outline-light">Create a brief</a>
                                     </div>
                                 </div>
@@ -223,7 +357,8 @@
                         <div class="col-lg-6">
                             <div class="card">
                                 <p class="fs-8 fw-bold">RECOMMENDED FOR YOU</p>
-                                <div class="d-flex align-items-center">
+                                <div
+                                    class="d-flex flex-column flex-md-row gap-md-0 text-md-start text-center gap-3 align-items-center">
                                     <div class="flex-shrink-0">
                                         <img src="./assets/img/magic-wand.svg" alt="Service 1" class="rounded-circle"
                                             width="64" height="64">
@@ -232,7 +367,7 @@
                                         <h6 class="mt-0 mb-1">Get matched with freelancers</h6>
                                         <p class="fs-7 mb-0">Create a brief and get custom offers</p>
                                     </div>
-                                    <div class="ms-auto">
+                                    <div class="ms-md-auto">
                                         <a href="#" class="btn btn-outline-light">Create a brief</a>
                                     </div>
                                 </div>
@@ -273,6 +408,10 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="card gig-card">
                                         <div class="ratio ratio-16x9 relative overflow-hidden">
+                                            <div class="favourite-checkbox">
+                                                <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                                <label for="favorite"></label>
+                                            </div>
                                             <img class="w-full h-full object-fit-cover"
                                                 src="https://picsum.photos/350/250" alt="" />
                                         </div>
@@ -304,6 +443,10 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="card gig-card">
                                         <div class="ratio ratio-16x9 relative overflow-hidden">
+                                            <div class="favourite-checkbox">
+                                                <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                                <label for="favorite"></label>
+                                            </div>
                                             <img class="w-full h-full object-fit-cover"
                                                 src="https://picsum.photos/350/250" alt="" />
                                         </div>
@@ -332,6 +475,10 @@
                                 <div class="col-md-4 mb-4">
                                     <div class="card gig-card">
                                         <div class="ratio ratio-16x9 relative overflow-hidden">
+                                            <div class="favourite-checkbox">
+                                                <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                                <label for="favorite"></label>
+                                            </div>
                                             <img class="w-full h-full object-fit-cover"
                                                 src="https://picsum.photos/350/250" alt="" />
                                         </div>
@@ -391,6 +538,10 @@
                         <div class="swiper-slide">
                             <div class="card gig-card">
                                 <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
                                     <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
                                         alt="" />
                                 </div>
@@ -421,6 +572,10 @@
                         <div class="swiper-slide">
                             <div class="card gig-card">
                                 <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
                                     <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
                                         alt="" />
                                 </div>
@@ -451,6 +606,10 @@
                         <div class="swiper-slide">
                             <div class="card gig-card">
                                 <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
                                     <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
                                         alt="" />
                                 </div>
@@ -481,6 +640,10 @@
                         <div class="swiper-slide">
                             <div class="card gig-card">
                                 <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
                                     <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
                                         alt="" />
                                 </div>
@@ -511,6 +674,112 @@
                         <div class="swiper-slide">
                             <div class="card gig-card">
                                 <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
                                     <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
                                         alt="" />
                                 </div>
@@ -539,10 +808,48 @@
                             </div>
                         </div>
 
+                        <div class="swiper-slide">
+                            <div class="card gig-card">
+                                <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
+                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
+                                        alt="" />
+                                </div>
+                                <div class="card-body px-0">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
+                                            width="40" height="40" alt="Avatar 1">
+                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
+                                        <div class="ms-auto flex-shrink-0">
+                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
+                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
+                                        animations.
+                                        I will do 3d cartoon or anime character for music video</p>
+                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
+                                        <img src="./assets/img/icons/star-filled.svg" alt="">
+                                        <span class="fw-bold">4.2</span>
+                                        <span class="text-muted fw-light fs-7">(20)</span>
+                                    </div>
+                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="swiper-slide">
                             <div class="card gig-card">
                                 <div class="ratio ratio-16x9 relative overflow-hidden">
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
+                                    </div>
                                     <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
                                         alt="" />
                                 </div>
@@ -573,66 +880,10 @@
                         <div class="swiper-slide">
                             <div class="card gig-card">
                                 <div class="ratio ratio-16x9 relative overflow-hidden">
-                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
-                                        alt="" />
-                                </div>
-                                <div class="card-body px-0">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
-                                            width="40" height="40" alt="Avatar 1">
-                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
-                                        <div class="ms-auto flex-shrink-0">
-                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
-                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
-                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
-                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
-                                        </div>
+                                    <div class="favourite-checkbox">
+                                        <input type="checkbox" id="favorite" class="favorite-checkbox">
+                                        <label for="favorite"></label>
                                     </div>
-                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
-                                        animations.
-                                        I will do 3d cartoon or anime character for music video</p>
-                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
-                                        <img src="./assets/img/icons/star-filled.svg" alt="">
-                                        <span class="fw-bold">4.2</span>
-                                        <span class="text-muted fw-light fs-7">(20)</span>
-                                    </div>
-                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card gig-card">
-                                <div class="ratio ratio-16x9 relative overflow-hidden">
-                                    <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
-                                        alt="" />
-                                </div>
-                                <div class="card-body px-0">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-2"
-                                            width="40" height="40" alt="Avatar 1">
-                                        <h5 class="card-title mb-0 fs-7 font-libre-franklin fw-bold me-2">Alex</h5>
-                                        <div class="ms-auto flex-shrink-0">
-                                            <span class="fw-bold fs-7 text-muted me-1">Top Level 2</span>
-                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
-                                            <img src="./assets/img/icons/rating-filled.svg" alt="">
-                                            <img src="./assets/img/icons/rating-unfilled.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <p class="card-text text-muted fw-light mb-2">I will create Spine 2d
-                                        animations.
-                                        I will do 3d cartoon or anime character for music video</p>
-                                    <div class="d-flex align-items-center gap-1 font-libre-franklin">
-                                        <img src="./assets/img/icons/star-filled.svg" alt="">
-                                        <span class="fw-bold">4.2</span>
-                                        <span class="text-muted fw-light fs-7">(20)</span>
-                                    </div>
-                                    <div class="fw-medium mt-1 ">From $ <span>12,600</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card gig-card">
-                                <div class="ratio ratio-16x9 relative overflow-hidden">
                                     <img class="w-full h-full object-fit-cover" src="https://picsum.photos/350/250"
                                         alt="" />
                                 </div>
