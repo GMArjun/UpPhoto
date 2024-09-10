@@ -85,12 +85,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-height: 108px;
   background-color: var(--color-background-light);
   border-bottom: 1px solid var(--color-border);
   z-index: 999;
   @media (max-width: $breakpoint-md) {
-    min-height: auto
+    min-height: auto;
   }
 
   .input-group {
@@ -179,18 +180,18 @@ header {
     display: flex;
     gap: 8px;
   }
-  .accordion{
+  .accordion {
     box-shadow: none;
     border: none;
-    .accordion-item{
+    .accordion-item {
       box-shadow: none;
       border: none;
       padding: 8px 0px;
     }
-    .accordion-body{
+    .accordion-body {
       padding-bottom: 0px;
     }
-    .accordion-button{
+    .accordion-button {
       padding: 0px;
       box-shadow: none;
       border: none;
@@ -799,17 +800,16 @@ footer {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: url('../img/icons/heart.svg');
+    background-image: url("../img/icons/heart.svg");
     background-size: cover;
     background-repeat: no-repeat;
     transition: background-image 0.3s ease;
   }
 
   &:checked + label {
-    background-image: url('../img/icons/heart-fill.svg');
+    background-image: url("../img/icons/heart-fill.svg");
   }
 }
-
 
 .fw-extrabold {
   font-weight: 800 !important;
@@ -1081,25 +1081,6 @@ main {
   }
 }
 
-.profile-picture-upload {
-  // position: absolute;
-  // height: 100%;
-  // width: 100%;
-}
-
-// .sw-theme-dots {
-//   & > .nav {
-//     .nav-link {
-//       .num {
-//         right: unset;
-//       }
-//       &::after {
-//         right: unset;
-//       }
-//     }
-//   }
-// }
-
 .guides-profile {
   width: 34px;
   border-radius: 50%;
@@ -1356,7 +1337,7 @@ main {
     border-radius: 4px;
     overflow: hidden;
     position: relative;
-    .favourite-checkbox{
+    .favourite-checkbox {
       z-index: 1;
       right: 10px;
       top: 10px;
@@ -1406,9 +1387,9 @@ main {
   top: 108px;
   z-index: 100;
   background-color: #fff;
-  & > .container-xl{
-    &::before{
-      content: '';
+  & > .container-xl {
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: -100%;
@@ -1417,8 +1398,8 @@ main {
       background-color: #fff;
       z-index: 2;
     }
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       top: 0;
       left: 100%;
@@ -1428,7 +1409,7 @@ main {
       z-index: 2;
     }
   }
-  .swiper{
+  .swiper {
     overflow: visible;
   }
   .swiper-button-prev-category-nav {
@@ -1460,19 +1441,84 @@ main {
       cursor: pointer;
     }
   }
-  .dropdown-menu{
+  .dropdown-menu {
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06);
     border-radius: $border-radius;
     min-width: 800px;
     padding: 24px;
     border: none;
-    .dropdown-item{
+    .dropdown-item {
       padding: 0px;
       color: var(--color-text-muted);
       background-color: transparent;
-      &:hover{
+      &:hover {
         color: var(--color-primary);
       }
     }
   }
+}
+
+#smartwizard {
+  padding-bottom: 20px;
+  .nav-progress {
+    max-width: max-content;
+    .nav-item {
+      .nav-link {
+        text-wrap: nowrap;
+        .num {
+          font-size: 1rem;
+          font-family: "Libre Franklin";
+          font-weight: normal;
+          top: -29px;
+        }
+      }
+    }
+  }
+  .toolbar-bottom {
+    padding: 0px;
+    text-align: left;
+    .sw-btn-next{
+      min-width: 150px;
+    }
+  }
+  table{
+    thead{
+      tr{
+        th{
+          background-color: #F2F2F2;
+        }
+      }
+    }
+    th{
+      font-weight: 400;
+    }
+  }
+}
+
+.nice-select{
+  float: unset;
+  .list{
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+}
+.nice-select.open .list {
+  width: 100%;
+  li{
+    background-color: #fff !important;
+  }
+}
+
+hr {
+  border-color: #a8aaab;
+}
+
+.sw>.tab-content{
+  height: auto !important;
+}
+
+.assets-box{
+  padding: 10px;
+  border: 1px solid #dee2e6;
 }

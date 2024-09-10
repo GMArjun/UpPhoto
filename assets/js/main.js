@@ -176,3 +176,7 @@ $('input[name="language"]').on("change", function () {
   $("head").prepend(newStylesheet);
   $(`link[href="./assets/style/${removeStylesheet}"]`).remove();
 });
+
+$(document).ready(function() {
+  $('select').niceSelect();
+});

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
     <link href="./assets/style/smart_wizard_all.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
     <link rel="stylesheet" href="./assets/style/style.css" />
 </head>
 
@@ -19,26 +21,71 @@
                 <a href="#">
                     <img src="./assets/img/logo.svg" class="logo" alt="logo" />
                 </a>
-                <nav class="d-flex align-items-center">
-                    <div class="dropdown d-none d-md-flex">
-                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Explore
-                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
-                            <li><a class="dropdown-item" href="#">Category 1</a></li>
-                            <li><a class="dropdown-item" href="#">Category 2</a></li>
-                            <li><a class="dropdown-item" href="#">Category 3</a></li>
-                        </ul>
+
+                <div class="input-group d-none d-md-flex">
+                    <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                        aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                    <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                        Search
+                    </button>
+                </div>
+
+                <nav class="d-flex align-items-center flex-shrink-0">
+                    <div class="d-flex flex-shrink-0 align-items-center header-items gap-1 gap-md-2">
+                        <a href="#" class="item-img"><img src="./assets/img/icons/notification.svg" alt=""></a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/message.svg" alt=""></a>
+                        <a href="#" class="item-img item-img-heart"><img src="./assets/img/icons/heart-fill.svg"
+                                alt=""></a>
+                        <a href="#" class="d-none d-md-flex">Orders</a>
+                        <div class="dropdown ms-1 ms-md-3 profile-dropdown">
+                            <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://avatar.iran.liara.run/public/1" alt="User 1" class="avatar" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                                <li class="px-3 py-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://avatar.iran.liara.run/public/1" alt="User 1"
+                                            class="avatar me-3" style="width: 48px; height: 48px;" />
+                                        <div>
+                                            <h6 class="mb-0">John Doe</h6>
+                                            <small class="text-muted">john.doe@example.com</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="px-3 py-2">
+                                    <button class="btn btn-outline-primary w-100">Switch to Selling</button>
+                                </li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Post a Request</a></li>
+                                <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item d-flex justify-content-between align-items-center"
+                                        href="#">Invite your team <span class="tag">UpPhoto Pro</span></a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <a href="#" class="" data-bs-toggle="modal" data-bs-target="#languageCurrencyModal"><img
-                            src="./assets/img/icons/language.svg" alt="language" />Languages</a>
-                    <a href="#" class="d-none d-md-flex">Become a seller</a>
-                    <a href="#" class="d-none d-md-flex" data-bs-toggle="modal" data-bs-target="#signinLoginModal">Sign
-                        in</a>
-                    <a href="#" class="d-none d-md-flex btn btn-outline-dark p-2 px-3" data-bs-toggle="modal"
-                        data-bs-target="#signinLoginModal">Join</a>
                     <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#sidebar" aria-controls="sidebar">
                         <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
@@ -46,10 +93,19 @@
                 </nav>
             </nav>
         </div>
+        <div class="container-xl px-4 px-xl-0 pt-3 d-flex d-md-none">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                    aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                    Search
+                </button>
+            </div>
+        </div>
     </header>
 
     <main class="container-xl px-4 px-xl-0">
-        <div class="mt-4">
+        <div class="mt-4 pt-3">
             <div id="smartwizard">
                 <ul class="nav nav-progress">
                     <li class="nav-item">
@@ -71,16 +127,23 @@
                 </ul>
 
                 <div class="tab-content">
+                    <hr>
                     <div id="personal-info" class="tab-pane" role="tabpanel">
-                        <div class="row">
-                            <div class="col-3">
+                        <h2>Personal Info</h2>
+                        <p class="col-lg-6 text-secondary pb-3">Lorem ipsum dolor sit amet consectetur. Fames vel et
+                            vivamus volutpat dui sed massa tellus. Donec netus at eget dui nisi ornare. Lobortis arcu
+                            mattis egestas risus at amet mi. Sagittis aliquam integer tortor ut pellentesque dolor
+                            suspendisse.</p>
+                        <hr>
+                        <div class="row gy-3 mb-5 pb-4 pt-5">
+                            <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Full Name *</h6>
                                     <span class="text-muted">Private</span>
                                 </div>
-                                <p class="text-muted fs-7">Ex. John Smith</p>
+                                <p class="text-muted fs-7 mb-0">Ex. John Smith</p>
                             </div>
-                            <div class="col-3">
+                            <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <input type="password" class="form-control py-2" id="password">
                                     <button type="button" class="btn p-0" data-bs-toggle="tooltip"
@@ -89,7 +152,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <input type="password" class="form-control py-2" id="password">
                                     <button type="button" class="btn p-0" data-bs-toggle="tooltip"
@@ -99,13 +162,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-3">
+                        <div class="row gy-3 mb-5 pb-4">
+                            <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Display Name *</h6>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <input type="password" class="form-control py-2" id="password">
                                     <button type="button" class="btn p-0" data-bs-toggle="tooltip"
@@ -115,13 +178,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-3">
+                        <div class="row gy-3 mb-5 pb-4">
+                            <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Profile Picture *</h6>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3">
                                 <div class="rounded-3 border rounded-circle d-flex position-relative flex-column align-items-center justify-content-center"
                                     style="width: 120px; height: 120px; cursor: pointer;">
                                     <input type="file" id="profile-picture-upload" class="d-none" accept="image/*">
@@ -132,16 +195,78 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-3">
+                        <div class="row gy-3 mb-5 pb-4">
+                            <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Description *</h6>
                                 </div>
                             </div>
-                            <div class="col-9">
+                            <div class="col-lg-9">
                                 <textarea class="form-control" placeholder="Leave a comment here"
                                     id="floatingTextarea2Disabled" style="height: 100px"></textarea>
                                 <p class="text-end text-muted fs-7">150/600</p>
+                            </div>
+                        </div>
+                        <div class="row gy-3 mb-5 pb-4">
+                            <div class="col-lg-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <h6 class="mb-0">Language *</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="assets-box">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <select class="w-100">
+                                                <option data-display="Language">Language</option>
+                                                <option value="1">English</option>
+                                                <option value="2">French</option>
+                                                <option value="3">Arabic</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <select class="w-100">
+                                                <option data-display="Language Level">Language Level</option>
+                                                <option value="1">Beginner</option>
+                                                <option value="2">Intermediate</option>
+                                                <option value="3">Fluent</option>
+                                                <option value="4">Native</option>
+                                            </select>
+                                        </div>
+                                        <div class="col d-flex gap-2">
+                                            <button class="btn btn-secondary w-100">Cancel</button>
+                                            <button class="btn btn-secondary w-100">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <table class="table border mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col fw-normal">Language</th>
+                                            <th scope="col fw-normal">Level</th>
+                                            <th scope="col" class="text-end fw-normal text-primary fs-7 cursor-pointer">
+                                                Add New</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>English</th>
+                                            <td>Fluent</td>
+                                            <td class="text-end">
+                                                <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
+                                                <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>English</th>
+                                            <td>Fluent</td>
+                                            <td class="text-end">
+                                                <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
+                                                <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -160,7 +285,6 @@
 
 
     <footer>
-
         <div class="my-5 pt-4 pb-4">
             <div class="container-xl px-4 px-xl-0">
                 <div class="grid-links">
@@ -293,10 +417,21 @@
 
     <script src="./assets/js/jquery.smartWizard.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
     <script>
         $("#smartwizard").smartWizard({
             theme: "dots",
             justified: true,
+            lang: {
+                next: 'Continue',
+                previous: 'Back'
+            },
+            toolbar: {
+                position: 'bottom', // none|top|bottom|both
+                showNextButton: true, // show/hide a Next button
+                showPreviousButton: false, // show/hide a Previous button
+            },
         });
 
     </script>
