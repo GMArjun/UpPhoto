@@ -106,7 +106,7 @@
 
 
     <div class="category-slider d-none d-md-flex">
-        <div class="container-xl px-5 py-3 position-relative">
+        <div class="container-xl px-5 position-relative">
             <button class="btn border-0 swiper-button-prev-category-nav"">
                 <img src=" ./assets/img/icons/chevron-left.svg" alt="chevron-left" />
             </button>
@@ -220,6 +220,32 @@
         </div>
     </div>
 
+    <!-- Language Modal -->
+    <div class="modal fade" id="editNameModal" tabindex="-1" aria-labelledby="editNameModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 450px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editNameModalLabel">
+                        Edit Name
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="pt-3">
+                        <form>
+                            <div class="mb-3">
+                                <label for="editNameInput" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="editNameInput"
+                                    placeholder="Enter your name">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main>
         <div class="container-xl px-4 px-xl-0">
             <div class="profile-page">
@@ -228,12 +254,19 @@
                         <div class="card">
                             <div class="card-body text-center p-4">
                                 <div class="mb-3">
-                                    <img src="https://avatar.iran.liara.run/public/30"" alt=" Profile Image"
-                                        class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                                    <div class="profile-image-uploader">
+                                        <input type="file" id="profile-image-input" class="d-none" accept="image/*">
+                                        <label for="profile-image-input" class="mb-0">
+                                            <img src="https://avatar.iran.liara.run/public/30" alt="Profile Image"
+                                                class="rounded-circle"
+                                                style="width: 150px; height: 150px; object-fit: cover; cursor: pointer;">
+                                        </label>
+                                    </div>
                                 </div>
                                 <h5 class="card-title mb-1 fs-7">
                                     John Doe
-                                    <a href="#" class="text-muted ms-2">
+                                    <a href="#" class="text-muted ms-2" data-bs-toggle="modal"
+                                        data-bs-target="#editNameModal">
                                         <img src="./assets/img/icons/pencil_new.svg" alt="">
                                     </a>
                                     <span class="badge text-bg-secondary fs-7 ms-2">New</span>
@@ -281,8 +314,14 @@
                                         <button class="btn btn-primary w-100">Add</button>
                                     </div>
                                 </div>
-                                <p class="mb-0 mt-3">Tamil - <span class="text-secondary">Native</span></p>
-                                <p class="mb-0">English - <span class="text-secondary">Fluent</span></p>
+                                <p class="mb-0 mt-3 editable-p">Tamil - <span class="text-secondary">Native</span>
+                                    <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
+                                    <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                </p>
+                                <p class="mb-0 editable-p">English - <span class="text-secondary">Fluent</span>
+                                    <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
+                                    <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                </p>
                                 <hr class="my-4">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h6 class="card-title mb-0">Skills</h6>
@@ -291,8 +330,19 @@
                                     </a>
                                 </div>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <span class="border p-2 rounded-5 px-3">Mobile UI design</span>
-                                    <span class="border p-2 rounded-5 px-3">A/B Testing</span>
+                                    <span class="border p-2 rounded-5 px-3 editable-badge">Mobile UI design
+                                        <span class="rounded-5">
+                                            <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
+                                            <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                        </span>
+                                    </span>
+
+                                    <span class="border p-2 rounded-5 px-3 editable-badge">Testing
+                                        <span class="rounded-5">
+                                            <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
+                                            <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                        </span>
+                                    </span>
                                 </div>
                                 <hr class="my-4">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -302,7 +352,10 @@
                                     </a>
                                 </div>
                                 <div class="fs-7">
-                                    <p class="mb-0">Certification - UX design</p>
+                                    <p class="mb-0 editable-p">Certification - UX design
+                                        <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
+                                        <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                    </p>
                                     <p class="text-secondary">Kamaraj university, Madurai, Tamil nadu, India.</p>
                                 </div>
                                 <hr class="my-4">
@@ -313,7 +366,10 @@
                                     </a>
                                 </div>
                                 <div class="fs-7">
-                                    <p class="mb-0">Certification</p>
+                                    <p class="mb-0 editable-p">Certification <img class="cursor-pointer"
+                                            src="./assets/img/icons/Delete.svg" alt="">
+                                        <img class="cursor-pointer" src="./assets/img/icons/pencil.svg" alt="">
+                                    </p>
                                     <p class="text-secondary">Google certificatio, 2024</p>
                                 </div>
                             </div>
@@ -412,7 +468,8 @@
                                                         <a class="dropdown-toggle" data-bs-offset="0,14" href="#"
                                                             role="button" data-bs-toggle="dropdown"
                                                             aria-expanded="false">
-                                                            <img style="transform: none;" src="./assets/img/icons/menu_horizontal.svg" alt="">
+                                                            <img style="transform: none;"
+                                                                src="./assets/img/icons/menu_horizontal.svg" alt="">
                                                         </a>
                                                         <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
                                                             <li><a class="dropdown-item" href="#">Delete</a></li>
@@ -420,7 +477,8 @@
                                                             <li><a class="dropdown-item" href="#">More</a></li>
                                                         </ul>
                                                     </div>
-                                                    <span class="fs-8 text-secondary me-1 ">STARTING AT</span> <span>$20</span>
+                                                    <span class="fs-8 text-secondary me-1 ">STARTING AT</span>
+                                                    <span>$20</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -632,7 +690,7 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             document.body.style.backgroundColor = '#FAFAFA';
         });
     </script>
