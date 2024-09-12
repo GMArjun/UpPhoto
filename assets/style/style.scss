@@ -886,6 +886,10 @@ main {
     background: #fff;
     width: 100%;
 
+    img{
+      height: 34px;
+    }
+
     p {
       margin: 0;
     }
@@ -1518,6 +1522,10 @@ main {
     .nav-item {
       .nav-link {
         text-wrap: nowrap;
+        &.default.done{
+          color: var(--color-primary);
+          font-weight: 600;
+        }
         .num {
           font-size: 1rem;
           font-family: "Libre Franklin";
@@ -1562,8 +1570,9 @@ main {
     background-image: url("../img/icons/icon-down.svg");
     background-repeat: no-repeat;
     transform: none !important;
+    background-size: 12px;
     border: none;
-    width: 16px;
+    width: 12px;
     height: 12px;
   }
   &.open {
@@ -1802,4 +1811,64 @@ hr {
 
   .bg-gray{
     background-color: var(--color-background-gray);
+  }
+
+  .form-check{
+    cursor: pointer;
+    .form-check-input{
+      height: 18px;
+      width: 18px;
+      margin-top: 3px;
+      margin-left: -1.6em;
+    }
+    .form-check-input:checked[type=checkbox]{
+      background-image: url(../img/icons/select_tick.svg);
+      background-color: #fff;
+      background-size: 12px;
+    }
+    .form-check-label{
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  .widget-box{
+    padding: 10px;
+    display: grid;
+    gap: 8px;
+    .type-1{
+      display: grid;
+      grid-template-columns: 1fr 1fr 80px;
+      gap: 8px;
+    }
+    .type-2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .type-3{
+      display: grid;
+      grid-template-columns: 1fr 124px;
+      gap: 8px;
+      .d-flex{
+        .nice-select{
+          &.first-select{
+            border-radius: 4px 0px 0px 4px;
+          }
+          &.last-select{
+            border-radius: 0px 4px 4px 0px;
+            border-left: 0px;
+          }
+        }
+      }
+    }
+    .type-4{
+      display: grid;
+      grid-template-columns: 1fr 1fr 124px;
+      gap: 8px;
+    }
+  }
+
+  .btn-primary-shade {
+    background-color: #E7F0FF;
   }

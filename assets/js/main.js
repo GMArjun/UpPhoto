@@ -218,3 +218,16 @@ function setDropdownHeight() {
 }
 setDropdownHeight();
 $(window).on("resize", setDropdownHeight);
+
+
+input.onfocus = function () {
+  browsers.style.display = 'block';
+  input.style.borderRadius = "5px 5px 0 0";  
+};
+for (let option of browsers.options) {
+  option.onclick = function () {
+    input.value = option.value;
+    browsers.style.display = 'none';
+    input.style.borderRadius = "5px";
+  }
+};

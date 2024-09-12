@@ -977,6 +977,10 @@ main {
   width: 100%;
 }
 
+.tech-list .chip-card img {
+  height: 34px;
+}
+
 .tech-list .chip-card p {
   margin: 0;
 }
@@ -1776,6 +1780,11 @@ main {
   text-wrap: nowrap;
 }
 
+#smartwizard .nav-progress .nav-item .nav-link.default.done {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 #smartwizard .nav-progress .nav-item .nav-link .num {
   font-size: 1rem;
   font-family: "Libre Franklin";
@@ -1820,8 +1829,9 @@ main {
   background-repeat: no-repeat;
   -webkit-transform: none !important;
           transform: none !important;
+  background-size: 12px;
   border: none;
-  width: 16px;
+  width: 12px;
   height: 12px;
 }
 
@@ -2128,5 +2138,82 @@ hr {
 
 .bg-gray {
   background-color: var(--color-background-gray);
+}
+
+.form-check {
+  cursor: pointer;
+}
+
+.form-check .form-check-input {
+  height: 18px;
+  width: 18px;
+  margin-top: 3px;
+  margin-left: -1.6em;
+}
+
+.form-check .form-check-input:checked[type=checkbox] {
+  background-image: url(../img/icons/select_tick.svg);
+  background-color: #fff;
+  background-size: 12px;
+}
+
+.form-check .form-check-label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.widget-box {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  gap: 8px;
+}
+
+.widget-box .type-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 80px;
+      grid-template-columns: 1fr 1fr 80px;
+  gap: 8px;
+}
+
+.widget-box .type-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.widget-box .type-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 124px;
+      grid-template-columns: 1fr 124px;
+  gap: 8px;
+}
+
+.widget-box .type-3 .d-flex .nice-select.first-select {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.widget-box .type-3 .d-flex .nice-select.last-select {
+  border-radius: 0px 4px 4px 0px;
+  border-left: 0px;
+}
+
+.widget-box .type-4 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 124px;
+      grid-template-columns: 1fr 1fr 124px;
+  gap: 8px;
+}
+
+.btn-primary-shade {
+  background-color: #E7F0FF;
 }
 /*# sourceMappingURL=style.css.map */
