@@ -117,27 +117,27 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="dropdown">
-                            <div class="category-item" data-bs-offset="0,24" data-bs-toggle="dropdown"
+                            <div class="category-item" data-bs-offset="0,18" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Writing & Translation
                             </div>
-                            <ul class="dropdown-menu font-libre-franklin">
+                            <ul class="dropdown-menu font-libre-franklin" id="gig-menu-dropdown">
                                 <div class="row">
                                     <div class="col-4 d-flex flex-column gap-4">
                                         <div class="d-flex flex-column gap-3">
                                             <p class="mb-0 fw-bold">Art & Illustration</p>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                         </div>
                                         <div class="d-flex flex-column gap-3">
                                             <p class="mb-0 fw-bold">Logo & Brand Identity</p>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
                                         </div>
@@ -147,10 +147,10 @@
                                             <p class="mb-0 fw-bold">Art & Illustration</p>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
                                         </div>
@@ -158,7 +158,7 @@
                                             <p class="mb-0 fw-bold">Logo & Brand Identity</p>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
 
                                         </div>
                                     </div>
@@ -167,18 +167,18 @@
                                             <p class="mb-0 fw-bold">Art & Illustration</p>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                         </div>
                                         <div class="d-flex flex-column gap-3">
                                             <p class="mb-0 fw-bold">Logo & Brand Identity</p>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
                                             <a class="dropdown-item" href="#">Illustration</a>
                                             <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
                                         </div>
                                     </div>
                                 </div>
@@ -284,8 +284,68 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card mt-5">
+                        <div class="card mt-4">
                             <div class="card-body">
+                                <h6 class="card-title mb-3 d-flex align-items-center gap-2">Intro video <span
+                                        class="badge bg-lavendar rounded-5">Beta</span></h6>
+                                <p class="text-muted">
+                                    Stand out with a short introduction video.
+                                </p>
+                                <button class="btn btn-primary w-100 py-2">Add Video</button>
+                            </div>
+                        </div>
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <h6 class="card-title mb-3 d-flex align-items-center gap-2">My Portfolio <span
+                                        class="badge bg-lavendar rounded-5">Beta</span></h6>
+                                <div class="portfolio-image-uploader mb-3">
+                                    <div id="portfolio-images-container" class="row g-2">
+                                        <!-- Images will be dynamically added here -->
+                                        <div class="col-6">
+                                            <div class="portfolio-image-uploader-input">
+                                                <input type="file" id="portfolio-image-input" class="d-none"
+                                                    accept="image/*" multiple>
+                                                <label for="portfolio-image-input"
+                                                    class="d-flex flex-column align-items-center cursor-pointer justify-content-center w-100 h-100">
+                                                    <img src="./assets/img/icons/plus-primary.svg" alt="Add image">
+                                                    <span class="text-primary mt-2 fw-medium">Add New</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    document.getElementById('portfolio-image-input').addEventListener('change', function (event) {
+                                        const files = event.target.files;
+                                        const container = document.getElementById('portfolio-images-container');
+                                        const uploadButton = container.querySelector('.col-6');
+
+                                        for (let i = 0; i < files.length; i++) {
+                                            const file = files[i];
+                                            const reader = new FileReader();
+
+                                            reader.onload = function (e) {
+                                                const col = document.createElement('div');
+                                                col.className = 'col-6';
+
+                                                const imgContainer = document.createElement('div');
+                                                imgContainer.className = 'portfolio-image-container';
+
+                                                const img = document.createElement('img');
+                                                img.src = e.target.result;
+
+                                                imgContainer.appendChild(img);
+                                                col.appendChild(imgContainer);
+                                                container.insertBefore(col, uploadButton);
+                                            }
+
+                                            reader.readAsDataURL(file);
+                                        }
+                                    });
+                                </script>
+                                <a href="#" class="text-primary text-decoration-underline fs-7">See Projects <img
+                                        class="ms-1" src="./assets/img/icons/right-arrow-primary.svg" alt=""> </a>
+                                <hr class="my-4">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <h6 class="card-title mb-0">Description</h6>
                                     <a href="#" class="text-primary fs-7">
@@ -665,8 +725,6 @@
     <script src="./assets/js/swiper-bundle.min.js"></script>
 
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="./assets/js/jquery.smartWizard.min.js"></script>
 

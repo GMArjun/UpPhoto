@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Upphoto</title>
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-3 position-sticky top-0">
+        <div class="container-xl px-4 px-xl-0">
+            <nav class="d-flex justify-content-between align-items-center">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+                </a>
+
+                <div class="input-group d-none d-md-flex">
+                    <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                        aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                    <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                        Search
+                    </button>
+                </div>
+
+                <nav class="d-flex align-items-center flex-shrink-0">
+                    <div class="d-flex flex-shrink-0 align-items-center header-items gap-1 gap-md-2">
+                        <a href="#" class="item-img"><img src="./assets/img/icons/notification.svg" alt=""></a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/message.svg" alt=""></a>
+                        <a href="#" class="item-img item-img-heart"><img src="./assets/img/icons/heart-fill.svg"
+                                alt=""></a>
+                        <a href="#" class="d-none d-md-flex">Orders</a>
+                        <div class="dropdown ms-1 ms-md-3 profile-dropdown">
+                            <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://avatar.iran.liara.run/public/1" alt="User 1" class="avatar" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                                <li class="px-3 py-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://avatar.iran.liara.run/public/1" alt="User 1"
+                                            class="avatar me-3" style="width: 48px; height: 48px;" />
+                                        <div>
+                                            <h6 class="mb-0">John Doe</h6>
+                                            <small class="text-muted">john.doe@example.com</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="px-3 py-2">
+                                    <button class="btn btn-outline-primary w-100">Switch to Selling</button>
+                                </li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Post a Request</a></li>
+                                <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item d-flex justify-content-between align-items-center"
+                                        href="#">Invite your team <span class="tag">UpPhoto Pro</span></a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+                    </button>
+                </nav>
+            </nav>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pt-3 d-flex d-md-none">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="What service you are looking for today?"
+                    aria-label="What service you are looking for today?" aria-describedby="button-search" />
+                <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
+                    Search
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="category-slider d-none d-md-flex">
+        <div class="container-xl px-5  position-relative">
+            <button class="btn border-0 swiper-button-prev-category-nav"">
+                <img src=" ./assets/img/icons/chevron-left.svg" alt="chevron-left" />
+            </button>
+            <button class="btn border-0 swiper-button-next-category-nav">
+                <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
+            </button>
+            <div class="swiper category-nav-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="dropdown">
+                            <div class="category-item" data-bs-offset="0,18" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Writing & Translation
+                            </div>
+                            <ul class="dropdown-menu font-libre-franklin">
+                                <div class="row">
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex flex-column gap-4">
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Art & Illustration</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3">
+                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Illustration</a>
+                                            <a class="dropdown-item" href="#">AI Artists</a>
+                                            <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Video & Animation</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Allow</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Programming & Tech</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Business</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Lifestyle</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Video & Animation</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Music & Audio</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Programming & Tech</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Business</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-item">Lifestyle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <a href="#">
+                <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+            </a>
+            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <h4>Services</h4>
+            <div class="accordion" id="servicesAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Programming & Tech
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Art & Illustration</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Digital Marketing
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Art & Illustration</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Video & Animation
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                        <div class="accordion-body">
+                            <div class="d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Art & Illustration</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <p class="mb-0 fw-bold">Logo & Brand Identity</p>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                    <a class="dropdown-item" href="#">Children’s Book Illustration</a>
+                                    <a class="dropdown-item" href="#">Illustration</a>
+                                    <a class="dropdown-item" href="#">AI Artists</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Home Page Before Login -->
+    <main>
+        <div class="container-xl px-4 px-xl-0 mb-5">
+            <div class="mt-4 pt-3">
+                <div class="row gy-5">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <h2 class="mb-4 pb-3">Ready to start selling on UpPhoto? Here’s the breakdown:</h2>
+                        <div class="media border-bottom border-top py-4  d-flex">
+                            <img src="./assets/img/icons/bs-1.svg" alt="Create Gig" width="30" height="30">
+                            <div class="media-body ms-3">
+                                <h6 class="mt-0">Learn what makes a successful profile</h6>
+                                <p class="text-muted fw-light mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                        </div>
+                        <div class="media border-bottom py-4  d-flex">
+                            <img src="./assets/img/icons/bs-2.svg" alt="Create Gig" width="30" height="30">
+                            <div class="media-body ms-3">
+                                <h6 class="mt-0">Learn what makes a successful profile</h6>
+                                <p class="text-muted fw-light mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                        </div>
+                        <div class="media border-bottom py-4 mb-4 d-flex">
+                            <img src="./assets/img/icons/bs-3.svg" alt="Create Gig" width="30" height="30">
+                            <div class="media-body ms-3">
+                                <h6 class="mt-0">Learn what makes a successful profile</h6>
+                                <p class="text-muted fw-light mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <button class="btn btn-primary py-2" style="min-width: 150px">Continue</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 seller-template-img order-1 order-lg-2">
+                        <img src="https://fastly.picsum.photos/id/947/536/354.jpg?hmac=SWrzGjeEE8tsTHphNhl2ma3QToFb3nDd5hLIbtWX69s"
+                            class="img-fluid rounded" alt="Become a Seller">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br> <br> <br>
+
+        <div class="container-xl px-4 px-xl-0 mb-5">
+            <div class="mt-4 pt-3">
+                <div class="row gy-5">
+                    <div class="col-lg-5 seller-template-img-two">
+                        <img src="https://picsum.photos/200/300"
+                            class="img-fluid rounded" alt="Become a Seller">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="">What makes a successful UpPhoto Profile?</h2>
+                        <p class="text-muted mb-4 pb-3 fw-light">Your first impression matters! Create a profile that will stand out from the crowd on UpPhoto.</p>
+                        <div class="row gy-4 mb-5">
+                            <div class="col-sm-6">
+                                <img src="./assets/img/icons/bs-4.svg" alt="Create Gig" width="30" height="30">
+                                <p class="text-muted fw-light mb-0 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="./assets/img/icons/bs-4.svg" alt="Create Gig" width="30" height="30">
+                                <p class="text-muted fw-light mb-0 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="./assets/img/icons/bs-4.svg" alt="Create Gig" width="30" height="30">
+                                <p class="text-muted fw-light mb-0 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <button class="btn btn-primary py-2" style="min-width: 150px">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-xl px-4 px-xl-0 mb-5">
+            <div class="mt-4 pt-3">
+                <div class="row gy-5">
+                    <div class="col-lg-5 seller-template-img-two">
+                        <img src="https://picsum.photos/200/300"
+                            class="img-fluid rounded" alt="Become a Seller">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="">Now, let’s talk about the things you want to seer clear of.</h2>
+                        <p class="text-muted mb-4 pb-3 fw-light">Your first impression matters! Create a profile that will stand out from the crowd on UpPhoto.</p>
+                        <div class="row gy-4 mb-5">
+                            <div class="col-sm-6">
+                                <img src="./assets/img/icons/bs-4.svg" alt="Create Gig" width="30" height="30">
+                                <p class="text-muted fw-light mb-0 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="./assets/img/icons/bs-4.svg" alt="Create Gig" width="30" height="30">
+                                <p class="text-muted fw-light mb-0 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="./assets/img/icons/bs-4.svg" alt="Create Gig" width="30" height="30">
+                                <p class="text-muted fw-light mb-0 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit. Suscipit iure laboriosam illum quia officia temporibus at mollitia optio quas
+                                    nisi?</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <button class="btn btn-primary py-2" style="min-width: 150px">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="my-5 pt-4 pb-4">
+            <div class="container-xl px-4 px-xl-0">
+                <div class="grid-links">
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Graphics and Design</a></li>
+                            <li><a href="#" class="nav-link mb-3">Digital Marketing</a></li>
+                            <li><a href="#" class="nav-link mb-3">Writing & Translation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Video & Animation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Photography</a></li>
+                            <li><a href="#" class="nav-link">Music and Audio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Careers</a></li>
+                            <li><a href="#" class="nav-link mb-3">Press & News</a></li>
+                            <li><a href="#" class="nav-link mb-3">Partnerships</a></li>
+                            <li><a href="#" class="nav-link mb-3">Privacy Policy</a></li>
+                            <li><a href="#" class="nav-link mb-3">Terms of Service</a></li>
+                            <li><a href="#" class="nav-link">Intellectual Property Claims</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Help & Support</a></li>
+                            <li><a href="#" class="nav-link mb-3">Trust & Safety</a></li>
+                            <li><a href="#" class="nav-link mb-3">Selling on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Buying on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link">Upphoto Forum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Events</a></li>
+                            <li><a href="#" class="nav-link mb-3">Blog</a></li>
+                            <li><a href="#" class="nav-link mb-3">Forum</a></li>
+                            <li><a href="#" class="nav-link mb-3">Community Standards</a></li>
+                            <li><a href="#" class="nav-link mb-3">Podcast</a></li>
+                            <li><a href="#" class="nav-link">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Upphoto Pro</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Studios</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Logo Maker</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link mb-3">Get Inspired</a></li>
+                            <li><a href="#" class="nav-link">ClearVoice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex gap-3 align-items-center justify-content-center justify-content-xl-start">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/img/logo.svg" alt="Upphoto Logo" />
+                        </a>
+                        <p class="mb-0">UpPhoto International Ltd. 2024</p>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-6 text-center text-md-end d-flex justify-content-center justify-content-xl-end pt-xl-0 pt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="Facebook"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/tiktok.svg" alt="Twitter" class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/twitter.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/printest.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/insta.svg" alt="Instagram"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/linkedin.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col pt-xl-0 pt-5">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#languageModal">
+                                    <img src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#currencyModal">
+                                    <img src="./assets/img/icons/rupee.svg" alt="money" />INR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

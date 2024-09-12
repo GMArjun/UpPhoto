@@ -180,3 +180,16 @@ $('input[name="language"]').on("change", function () {
 $(document).ready(function() {
   $('select').niceSelect();
 });
+
+function setDropdownHeight() {
+  var $dropdown = $('#gig-menu-dropdown');
+  if ($dropdown.length) {
+    var maxHeight = ($(window).height() - 108) * 0.8;
+    $dropdown.css({
+      'max-height': maxHeight + 'px',
+      'overflow-y': 'auto'
+    });
+  }
+}
+setDropdownHeight();
+$(window).on('resize', setDropdownHeight);
