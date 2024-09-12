@@ -1726,3 +1726,80 @@ hr {
       border-radius: 8px;
     }
   }
+
+  .seller-page-banner{
+    min-height: 600px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: grid;
+    padding: 16px;
+    grid-template-rows: 1fr auto;
+    gap: 40px;
+    video {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+      .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .content-bottom{
+        .row{
+          padding-bottom: 24px;
+          max-width: 778px;
+          margin: 0 auto;
+          border-radius: 6px;
+          background: rgba(0, 0, 0, 0.60);
+          backdrop-filter: blur(5px);
+        }
+      }
+  }
+
+  .seller-page{
+    .how-it-works{
+      .row{
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+    }
+    .accordion{
+      position: relative;
+      .accordion-button{
+        box-shadow: none;
+        background-color: transparent;
+        color: var(--color-text-primary);
+        font-size: 16px;
+        font-weight: 500;
+        &::after{
+          background-image: url(../img/icons/drown-arrow.svg);
+          filter: brightness(0) saturate(100%) invert(0%) sepia(6%) saturate(7500%) hue-rotate(290deg) brightness(92%) contrast(106%);
+        }
+      }
+      &:hover{
+        &::before{
+          content: '';
+          background-color: var(--color-primary);
+          height: 100%;
+          width: 4px;
+          position: absolute;
+          z-index: 3;
+        }
+      }
+    }
+  }
+
+  .bg-gray{
+    background-color: var(--color-background-gray);
+  }

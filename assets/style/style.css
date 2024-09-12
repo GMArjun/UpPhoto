@@ -2040,4 +2040,93 @@ hr {
   width: 100%;
   border-radius: 8px;
 }
+
+.seller-page-banner {
+  min-height: 600px;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  padding: 16px;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  gap: 40px;
+}
+
+.seller-page-banner video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.seller-page-banner .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.seller-page-banner .content-bottom .row {
+  padding-bottom: 24px;
+  max-width: 778px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.seller-page .how-it-works .row {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.seller-page .accordion {
+  position: relative;
+}
+
+.seller-page .accordion .accordion-button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.seller-page .accordion .accordion-button::after {
+  background-image: url(../img/icons/drown-arrow.svg);
+  -webkit-filter: brightness(0) saturate(100%) invert(0%) sepia(6%) saturate(7500%) hue-rotate(290deg) brightness(92%) contrast(106%);
+          filter: brightness(0) saturate(100%) invert(0%) sepia(6%) saturate(7500%) hue-rotate(290deg) brightness(92%) contrast(106%);
+}
+
+.seller-page .accordion:hover::before {
+  content: '';
+  background-color: var(--color-primary);
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  z-index: 3;
+}
+
+.bg-gray {
+  background-color: var(--color-background-gray);
+}
 /*# sourceMappingURL=style.css.map */
