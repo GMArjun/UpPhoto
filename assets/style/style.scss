@@ -1530,7 +1530,9 @@ main {
           font-size: 1rem;
           font-family: "Libre Franklin";
           font-weight: normal;
-          top: -29px;
+          @media (max-width: 640px) {
+            top: 2px;
+          }
         }
       }
     }
@@ -1604,10 +1606,6 @@ hr {
   height: auto !important;
 }
 
-.assets-box {
-  padding: 10px;
-  border: 1px solid #dee2e6;
-}
 
 .card-tabs {
   padding: 0px 24px;
@@ -1836,15 +1834,24 @@ hr {
     padding: 10px;
     display: grid;
     gap: 8px;
+    button{
+      min-width: 90px
+    }
     .type-1{
       display: grid;
-      grid-template-columns: 1fr 1fr 80px;
+      grid-template-columns: 1fr 1fr 90px;
       gap: 8px;
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: auto;
+      }
     }
     .type-2{
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: auto;
+      }
     }
     .type-3{
       display: grid;
@@ -1861,11 +1868,25 @@ hr {
           }
         }
       }
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: auto;
+      }
     }
     .type-4{
       display: grid;
       grid-template-columns: 1fr 1fr 124px;
       gap: 8px;
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: auto;
+      }
+    }
+    .type-5{
+      display: grid;
+      grid-template-columns: 1fr 1fr 180px;
+      gap: 8px;
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: auto;
+      }
     }
   }
 

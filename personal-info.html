@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
     <link href="./assets/style/smart_wizard_all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style/jquery.flexdatalist.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
     <link rel="stylesheet" href="./assets/style/style.css" />
@@ -135,7 +136,7 @@
                             mattis egestas risus at amet mi. Sagittis aliquam integer tortor ut pellentesque dolor
                             suspendisse.</p>
                         <hr>
-                        <div class="row gy-3 mb-5 pb-4 pt-5">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 pt-5">
                             <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Full Name *</h6>
@@ -162,7 +163,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row gy-3 mb-5 pb-4">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4">
                             <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Display Name *</h6>
@@ -178,7 +179,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row gy-3 mb-5 pb-4">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4">
                             <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Profile Picture *</h6>
@@ -195,7 +196,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row gy-3 mb-5 pb-4">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4">
                             <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Description *</h6>
@@ -207,38 +208,34 @@
                                 <p class="text-end text-muted fs-7">150/600</p>
                             </div>
                         </div>
-                        <div class="row gy-3 mb-5 pb-4">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4">
                             <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Language *</h6>
                                 </div>
                             </div>
                             <div class="col-lg-9">
-                                <div class="assets-box">
-                                    <div class="row g-2">
-                                        <div class="col-4">
-                                            <select class="w-100">
-                                                <option data-display="Language">Language</option>
-                                                <option value="1">English</option>
-                                                <option value="2">French</option>
-                                                <option value="3">Arabic</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-4">
-                                            <select class="w-100">
-                                                <option data-display="Language Level">Language Level</option>
-                                                <option value="1">Beginner</option>
-                                                <option value="2">Intermediate</option>
-                                                <option value="3">Fluent</option>
-                                                <option value="4">Native</option>
-                                            </select>
-                                        </div>
-                                        <div class="col d-flex gap-2">
+                                <div class="widget-box border rounded-3">
+                                    <div class="type-5">
+                                        <select class="w-100">
+                                            <option data-display="Language">Language</option>
+                                            <option value="1">English</option>
+                                            <option value="2">French</option>
+                                            <option value="3">Arabic</option>
+                                        </select>
+                                        <select class="w-100">
+                                            <option data-display="Language">Language</option>
+                                            <option value="1">English</option>
+                                            <option value="2">French</option>
+                                            <option value="3">Arabic</option>
+                                        </select>
+                                        <div class="d-flex gap-2">
                                             <button class="btn btn-secondary w-100">Cancel</button>
                                             <button class="btn btn-secondary w-100">Add</button>
                                         </div>
                                     </div>
                                 </div>
+
                                 <table class="table border mt-3">
                                     <thead>
                                         <tr>
@@ -277,14 +274,14 @@
                             mattis egestas risus at amet mi. Sagittis aliquam integer tortor ut pellentesque dolor
                             suspendisse./p>
                             <hr>
-                        <div class="row gy-3 mb-5 pb-4 pt-5">
-                            <div class="col-md-4 col-lg-3">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 pt-5">
+                            <div class="col-lg-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Your Occupation *</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex align-items-center gap-2">
+                            <div class="col-lg-8 col-xl-6">
+                                <div class="d-flex flex-wrap flex-md-nowrap align-items-center gap-2">
                                     <select class="w-100">
                                         <option data-display="Select Services">Select Services</option>
                                         <option value="1">Digital Marketing</option>
@@ -346,7 +343,7 @@
                                         class="text-primary fw-medium ms-2">Add New</span></span>
                             </div>
                         </div>
-                        <div class="row gy-3 mb-5 pb-4 pt-5">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 pt-5">
                             <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Skills *</h6>
@@ -363,10 +360,12 @@
                                             <option value="2">French</option>
                                             <option value="3">Arabic</option>
                                         </select>
-                                        <button class="btn btn-secondary px-4">Add</button>
+                                        <div class="d-flex justify-content-end">
+                                            <button class="btn btn-secondary px-3">Add</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-6 border rounded-1 mt-3  p-3">
+                                <div class="col-md-10 col-xl-6 border rounded-1 mt-3  p-3">
                                     <h6 class="card-title mb-3 d-flex align-items-center gap-2">Education</h6>
                                     <p class="mb-0 mt-3 editable-p cursor-pointer">B.A. - Library Science - <span
                                             class="text-muted">Template</span></span>
@@ -378,7 +377,7 @@
                             </div>
                         </div>
 
-                        <div class="row gy-3 mb-5 pb-4 pt-5">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 pt-5">
                             <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Education <span class="text-muted fs-7">(Optional)</span></h6>
@@ -394,14 +393,21 @@
                                             <option value="3">Arabic</option>
                                         </select>
                                         <input type="text" placeholder="College/University name"
-                                            class="form-control py-2" name="browsers" list="browsers" id="text">
-                                        <datalist id="browsers">
-                                            <option value="Internet Explorer">Internet Explorer</option>
-                                            <option value="Chrome">Chrome</option>
-                                            <option value="Safari">Safari</option>
-                                            <option value="Microsoft Edge">Microsoft Edge</option>
-                                            <option value="Firefox">Firefox</option>
+                                            class="form-control py-2 flexdatalist" data-min-length='1' list='languages'
+                                            name='language'>
+                                        <datalist id="languages">
+                                            <option value="PHP">PHP</option>
+                                            <option value="JavaScript">JavaScript</option>
+                                            <option value="Cobol">Cobol</option>
+                                            <option value="C#">C#</option>
+                                            <option value="C++">C++</option>
+                                            <option value="Java">Java</option>
+                                            <option value="Pascal">Pascal</option>
+                                            <option value="FORTRAN">FORTRAN</option>
+                                            <option value="Lisp">Lisp</option>
+                                            <option value="Swift">Swift</option>
                                         </datalist>
+
                                     </div>
                                     <div class="type-3">
                                         <div class="d-flex">
@@ -428,7 +434,7 @@
                                         <button class="btn btn-secondary px-4">Add</button>
                                     </div>
                                 </div>
-                                <div class="col-6 border rounded-1 mt-3  p-3">
+                                <div class="col-md-10 col-xl-6 border rounded-1 mt-3  p-3">
                                     <h6 class="card-title mb-3 d-flex align-items-center gap-2">Education</h6>
                                     <p class="mb-0 mt-3 editable-p cursor-pointer">B.A. - Library Science</span>
                                         <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
@@ -439,7 +445,7 @@
                             </div>
                         </div>
 
-                        <div class="row gy-3 mb-5 pb-4 pt-5">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 pt-5">
                             <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Certification <span class="text-muted fs-7">(Optional)</span></h6>
@@ -470,7 +476,7 @@
                                         <button class="btn btn-secondary px-4">Add</button>
                                     </div>
                                 </div>
-                                <div class="col-6 border rounded-1 mt-3  p-3">
+                                <div class="col-md-10 col-xl-6 border rounded-1 mt-3  p-3">
                                     <h6 class="card-title mb-3 d-flex align-items-center gap-2">Education</h6>
                                     <p class="mb-0 mt-3 editable-p cursor-pointer">B.A. - Library Science</span>
                                         <img class="cursor-pointer" src="./assets/img/icons/Delete.svg" alt="">
@@ -482,7 +488,7 @@
                         </div>
 
 
-                        <div class="row gy-3 mb-5 pb-4 pt-5">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 pt-5">
                             <div class="col-md-4 col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <h6 class="mb-0">Personal Website</h6>
@@ -502,7 +508,7 @@
                             tellus. Donec netus at eget dui nisi ornare. Lobortis arcu mattis egestas risus at amet
                             mi. Sagittis aliquam integer tortor ut pellentesque dolor suspendisse.</p>
                         <hr>
-                        <div class="row gy-3 mb-5 pb-4 mt-4">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 mt-4">
                             <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <img src="./assets/img/icons/email-black.svg" alt="">
@@ -517,7 +523,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row gy-3 mb-5 pb-4 align-items-center">
+                        <div class="row gy-3 mb-4 mb-xl-5 pb-4 align-items-center">
                             <div class="col-lg-3">
                                 <div class="d-flex align-items-center gap-2">
                                     <img src="./assets/img/icons/phone-black.svg" alt="">
@@ -691,6 +697,14 @@
             },
         });
 
+    </script>
+
+    <script src="./assets/js/jquery.flexdatalist.min.js"></script>
+
+    <script>
+        $('.flexdatalist').flexdatalist({
+            minLength: 1
+        });
     </script>
 
     <script src="./assets/js/main.js"></script>
