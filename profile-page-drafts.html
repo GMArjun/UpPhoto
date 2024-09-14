@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Upphoto</title>
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
+    <link href="./assets/style/smart_wizard_all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style/jquery.flexdatalist.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+        integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-3 position-sticky top-0">
+        <div class="container-xl px-4 px-xl-0">
+            <nav class="d-flex justify-content-between align-items-center">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-xl px-4 px-xl-0">
+        <div class="mt-4 pt-3">
+            <div id="draft-wizard" class="profile-draft-wizard-style mb-5">
+                <ul class="nav nav-progress">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#create-project">
+                            <div class="num">1</div>
+                            Create Project
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#link-catalog">
+                            <div class="num">2</div>Link to Catalog
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="create-project" class="tab-pane" role="tabpanel">
+                        <h2 class="mt-5">Add a new project to your portfolio</h2>
+
+                        <div class="row gy-5 gx-3 mt-0 mb-5">
+                            <div class="col-6">
+                                <h5 class="mb-0">Project name *</h5>
+                                <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. </p>
+                                <input type="text" class="form-control py-2"
+                                    placeholder="Provide a link to your own professional website" id="password">
+                                <div class="d-flex justify-content-end text-muted fs-7">5/20</div>
+                            </div>
+                            <div class="col-12">
+                                <h5 class="mb-3">Industry</h5>
+                                <select class="nice-select w-100">
+                                    <option data-display="Language">Language</option>
+                                    <option value="1">English</option>
+                                    <option value="2">French</option>
+                                    <option value="3">Arabic</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="mb-3">Project duration</h5>
+                                <input type="text" class="form-control py-2" placeholder="Select duration"
+                                    id="password">
+                            </div>
+                            <div class="col-6">
+                                <h5 class="mb-3">Project cost</h5>
+                                <input type="text" class="form-control py-2" placeholder="Select duration"
+                                    id="password">
+                            </div>
+                            <div class="col-3">
+                                <h5 class="mb-3">Project Started On</h5>
+                                <select class="nice-select w-100">
+                                    <option data-display="Language">Language</option>
+                                    <option value="1">English</option>
+                                    <option value="2">French</option>
+                                    <option value="3">Arabic</option>
+                                </select>
+                            </div>
+                            <div class="col-3 d-flex align-items-end">
+                                <select class="nice-select w-100">
+                                    <option data-display="Language">Language</option>
+                                    <option value="1">English</option>
+                                    <option value="2">French</option>
+                                    <option value="3">Arabic</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <h5 class="mb-0">Project description</h5>
+                                <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. </p>
+                                <textarea style="min-height: 200px;" class="form-control py-2"
+                                    placeholder="Provide a link to your own professional website"></textarea>
+                                <div class="d-flex justify-content-end text-muted fs-7">5/20</div>
+                            </div>
+                            <div class="col-12">
+                                <h5 class="mb-0">Attachments</h5>
+                                <p class="text-muted mb-3">Lorem ipsum dolor sit amet consectetur. </p>
+                                <div id="drop-area"
+                                    class="border rounded text-center d-flex flex-column justify-content-center align-items-center"
+                                    style="min-height: 300px;border-style: dotted !important;">
+                                    <p class="text-secondary mt-auto mb-2 fs-7">Drag & drop a file or</p>
+                                    <input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+                                    <button class="btn btn-outline-dark" id="fileSelect">Choose Files</button>
+                                    <div class="text-muted mt-auto fs-7">
+                                        <p class="mb-0">You can upload following format</p>
+                                        <p>jpg, png, mp4, pdf</p>
+                                    </div>
+                                    <script>
+                                        let dropArea = document.getElementById('drop-area');
+                                        let fileElem = document.getElementById('fileElem');
+                                        let fileSelect = document.getElementById('fileSelect');
+
+                                        fileSelect.addEventListener('click', function (e) {
+                                            if (fileElem) {
+                                                fileElem.click();
+                                            }
+                                        });
+
+                                        fileElem.addEventListener('change', handleFiles);
+
+                                        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                                            dropArea.addEventListener(eventName, preventDefaults, false);
+                                        });
+
+                                        function preventDefaults(e) {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                        }
+
+                                        ['dragenter', 'dragover'].forEach(eventName => {
+                                            dropArea.addEventListener(eventName, highlight, false);
+                                        });
+
+                                        ['dragleave', 'drop'].forEach(eventName => {
+                                            dropArea.addEventListener(eventName, unhighlight, false);
+                                        });
+
+                                        function highlight(e) {
+                                            dropArea.classList.add('bg-light');
+                                        }
+
+                                        function unhighlight(e) {
+                                            dropArea.classList.remove('bg-light');
+                                        }
+
+                                        dropArea.addEventListener('drop', handleDrop, false);
+
+                                        function handleDrop(e) {
+                                            let dt = e.dataTransfer;
+                                            let files = dt.files;
+
+                                            handleFiles(files);
+                                        }
+
+                                        function handleFiles(files) {
+                                            files = [...files];
+                                            files.forEach(uploadFile);
+                                            files.forEach(previewFile);
+                                        }
+
+                                        function uploadFile(file) {
+                                            // Here you would typically send the file to a server
+                                            console.log('Uploading file:', file.name);
+                                        }
+
+                                        function previewFile(file) {
+                                            let reader = new FileReader();
+                                            reader.readAsDataURL(file);
+                                            reader.onloadend = function () {
+                                                let img = document.createElement('img');
+                                                img.src = reader.result;
+                                                img.className = 'img-thumbnail m-1';
+                                                img.style.maxWidth = '100px';
+                                                document.getElementById('gallery').appendChild(img);
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                                <div id="gallery" class="mt-3 d-flex flex-column flex-wrap"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="link-catalog" class="tab-pane" role="tabpanel">
+                        <div class="row mt-5 mb-5 pb-5">
+                            <div class="col-lg-8">
+                                <h2>Add some final details</h2>
+                                <p class="col-lg-10 text-secondary pb-3">Lorem ipsum dolor sit amet consectetur. Fames
+                                    vel et
+                                    vivamus volutpat dui sed massa tellus. Donec netus at eget dui nisi ornare. Lobortis
+                                    arcu
+                                    mattis egestas risus at amet mi. Sagittis aliquam integer tortor ut pellentesque
+                                    dolor
+                                    suspendisse.</p>
+                                <div class="mb-5 pb-5">
+                                    <h5 class="mb-0">Project category</h5>
+                                    <p class="text-muted mb-3">Select at most 4</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <select name="" id="" multiple class="select-category">
+                                                <option value="">Select Category</option>
+                                                <option value="1">Category 1</option>
+                                                <option value="2">Category 2</option>
+                                                <option value="3">Category 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end">
+                                <div style="max-width: 315px;">
+                                    <p class="text-muted mb-3 text-center">How clients will see your project</p>
+                                    <div class="card rounded-4">
+                                        <div class="card-body">
+                                            <img src="https://via.placeholder.com/300x200" class="w-100"
+                                                alt="Dummy Image" class="img-fluid rounded">
+                                            <p class="mb-1 mt-3 fs-8 text-muted">From: August 2024</p>
+                                            <h5>UI design screens</h5>
+                                            <p class="text-muted fs-7">Sharing these details will ensure potential
+                                                clients see the most relevant projects when they view your portfolio</p>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <span class="border p-2 rounded-5 px-3 fs-7">Mobile UI design
+                                                </span>
+
+                                                <span class="border p-2 rounded-5 px-3 fs-7">Testing
+                                                </span>
+                                            </div>
+                                            <div class="row g-0 mt-3">
+                                                <div class="col-6">
+                                                    <p class="mb-0 fs-8 text-muted">Project cost</p>
+                                                    <h6>$50-$100</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="mb-0 fs-8 text-muted">Project duration</p>
+                                                    <h6>1-7 days</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+
+            <div class="media d-flex align-items-center mb-4">
+                <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-3" width="80" height="80"
+                    alt="User Avatar">
+                <div class="media-body">
+                    <h6 class="mt-0 mb-0">John Doe</h6>
+                </div>
+                <button class="btn btn-secondary ms-auto">Contact</button>
+            </div>
+            <hr class="my-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h5 class="mb-0">Portfolio</h5>
+                <div>
+                    <button class="btn btn-secondary me-1">Re-order</button>
+                    <button class="btn btn-primary">+ Create new project</button>
+                </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-4">
+                <div>
+                    <select class="nice-select w-100">
+                        <option data-display="Languages">Language</option>
+                        <option value="1">English</option>
+                        <option value="2">French</option>
+                        <option value="3">Arabic</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="nice-select w-100">
+                        <option data-display="Languagee">Language</option>
+                        <option value="1">English</option>
+                        <option value="2">French</option>
+                        <option value="3">Arabic</option>
+                    </select>
+                </div>
+            </div>
+
+            <p class="text-muted mb-3 fs-7">Showing 1 project</p>
+
+            <div class="row g-4 mb-5 pb-5">
+                <div class="col-3">
+                    <div>
+                        <div class="card rounded-4">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/300x200" class="w-100" alt="Dummy Image"
+                                    class="img-fluid rounded">
+                                <p class="mb-1 mt-3 fs-8 text-muted">From: August 2024</p>
+                                <h5>UI design screens</h5>
+                                <p class="text-muted fs-7">Sharing these details will ensure potential
+                                    clients see the most relevant projects when they view your portfolio</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Mobile UI design
+                                    </span>
+
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Testing
+                                    </span>
+                                </div>
+                                <div class="row g-0 mt-3">
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project cost</p>
+                                        <h6>$50-$100</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project duration</p>
+                                        <h6>1-7 days</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <div class="card rounded-4">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/300x200" class="w-100" alt="Dummy Image"
+                                    class="img-fluid rounded">
+                                <p class="mb-1 mt-3 fs-8 text-muted">From: August 2024</p>
+                                <h5>UI design screens</h5>
+                                <p class="text-muted fs-7">Sharing these details will ensure potential
+                                    clients see the most relevant projects when they view your portfolio</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Mobile UI design
+                                    </span>
+
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Testing
+                                    </span>
+                                </div>
+                                <div class="row g-0 mt-3">
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project cost</p>
+                                        <h6>$50-$100</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project duration</p>
+                                        <h6>1-7 days</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <div class="card rounded-4">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/300x200" class="w-100" alt="Dummy Image"
+                                    class="img-fluid rounded">
+                                <p class="mb-1 mt-3 fs-8 text-muted">From: August 2024</p>
+                                <h5>UI design screens</h5>
+                                <p class="text-muted fs-7">Sharing these details will ensure potential
+                                    clients see the most relevant projects when they view your portfolio</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Mobile UI design
+                                    </span>
+
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Testing
+                                    </span>
+                                </div>
+                                <div class="row g-0 mt-3">
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project cost</p>
+                                        <h6>$50-$100</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project duration</p>
+                                        <h6>1-7 days</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <div class="card rounded-4">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/300x200" class="w-100" alt="Dummy Image"
+                                    class="img-fluid rounded">
+                                <p class="mb-1 mt-3 fs-8 text-muted">From: August 2024</p>
+                                <h5>UI design screens</h5>
+                                <p class="text-muted fs-7">Sharing these details will ensure potential
+                                    clients see the most relevant projects when they view your portfolio</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Mobile UI design
+                                    </span>
+
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Testing
+                                    </span>
+                                </div>
+                                <div class="row g-0 mt-3">
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project cost</p>
+                                        <h6>$50-$100</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project duration</p>
+                                        <h6>1-7 days</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+                        <div class="card rounded-4">
+                            <div class="card-body">
+                                <img src="https://via.placeholder.com/300x200" class="w-100" alt="Dummy Image"
+                                    class="img-fluid rounded">
+                                <p class="mb-1 mt-3 fs-8 text-muted">From: August 2024</p>
+                                <h5>UI design screens</h5>
+                                <p class="text-muted fs-7">Sharing these details will ensure potential
+                                    clients see the most relevant projects when they view your portfolio</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Mobile UI design
+                                    </span>
+
+                                    <span class="border p-2 rounded-5 px-3 fs-7">Testing
+                                    </span>
+                                </div>
+                                <div class="row g-0 mt-3">
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project cost</p>
+                                        <h6>$50-$100</h6>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0 fs-8 text-muted">Project duration</p>
+                                        <h6>1-7 days</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </main>
+
+
+    <footer>
+        <div class="my-5 pt-4 pb-4">
+            <div class="container-xl px-4 px-xl-0">
+                <div class="grid-links">
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Graphics and Design</a></li>
+                            <li><a href="#" class="nav-link mb-3">Digital Marketing</a></li>
+                            <li><a href="#" class="nav-link mb-3">Writing & Translation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Video & Animation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Photography</a></li>
+                            <li><a href="#" class="nav-link">Music and Audio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Careers</a></li>
+                            <li><a href="#" class="nav-link mb-3">Press & News</a></li>
+                            <li><a href="#" class="nav-link mb-3">Partnerships</a></li>
+                            <li><a href="#" class="nav-link mb-3">Privacy Policy</a></li>
+                            <li><a href="#" class="nav-link mb-3">Terms of Service</a></li>
+                            <li><a href="#" class="nav-link">Intellectual Property Claims</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Help & Support</a></li>
+                            <li><a href="#" class="nav-link mb-3">Trust & Safety</a></li>
+                            <li><a href="#" class="nav-link mb-3">Selling on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Buying on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link">Upphoto Forum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Events</a></li>
+                            <li><a href="#" class="nav-link mb-3">Blog</a></li>
+                            <li><a href="#" class="nav-link mb-3">Forum</a></li>
+                            <li><a href="#" class="nav-link mb-3">Community Standards</a></li>
+                            <li><a href="#" class="nav-link mb-3">Podcast</a></li>
+                            <li><a href="#" class="nav-link">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Upphoto Pro</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Studios</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Logo Maker</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link mb-3">Get Inspired</a></li>
+                            <li><a href="#" class="nav-link">ClearVoice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex gap-3 align-items-center justify-content-center justify-content-xl-start">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/img/logo.svg" alt="Upphoto Logo" />
+                        </a>
+                        <p class="mb-0">UpPhoto International Ltd. 2024</p>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-6 text-center text-md-end d-flex justify-content-center justify-content-xl-end pt-xl-0 pt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="Facebook"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/tiktok.svg" alt="Twitter" class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/twitter.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/printest.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/insta.svg" alt="Instagram"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/linkedin.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col pt-xl-0 pt-5">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#languageModal">
+                                    <img src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#currencyModal">
+                                    <img src="./assets/img/icons/rupee.svg" alt="money" />INR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+
+    <script src="./assets/js/jquery.smartWizard.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+    <script>
+        $("#draft-wizard").smartWizard({
+            theme: "dots",
+            justified: true,
+            lang: {
+                next: 'Continue',
+                previous: 'Back'
+            },
+            toolbar: {
+                position: 'bottom',
+                showNextButton: true,
+                showPreviousButton: true,
+            },
+            anchor: {
+                unDoneOnBackNavigation: true,
+            },
+        });
+
+    </script>
+
+    <script src="./assets/js/jquery.flexdatalist.min.js"></script>
+
+    <script>
+        $('.flexdatalist').flexdatalist({
+            minLength: 1
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+        integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(function () {
+            $(".select-category").selectize({
+                plugins: ['remove_button'],
+                delimiter: ',',
+                persist: false,
+                create: function (input) {
+                    return {
+                        value: input,
+                        text: input
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

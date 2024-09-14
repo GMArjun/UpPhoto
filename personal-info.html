@@ -107,7 +107,7 @@
 
     <main class="container-xl px-4 px-xl-0">
         <div class="mt-4 pt-3">
-            <div id="smartwizard">
+            <div id="personal-info-wizard" class="personal-info-wizard-style">
                 <ul class="nav nav-progress">
                     <li class="nav-item">
                         <a class="nav-link" href="#personal-info">
@@ -217,13 +217,13 @@
                             <div class="col-lg-9">
                                 <div class="widget-box border rounded-3">
                                     <div class="type-5">
-                                        <select class="w-100">
+                                        <select class="nice-select w-100">
                                             <option data-display="Language">Language</option>
                                             <option value="1">English</option>
                                             <option value="2">French</option>
                                             <option value="3">Arabic</option>
                                         </select>
-                                        <select class="w-100">
+                                        <select class="nice-select w-100">
                                             <option data-display="Language">Language</option>
                                             <option value="1">English</option>
                                             <option value="2">French</option>
@@ -282,7 +282,7 @@
                             </div>
                             <div class="col-lg-8 col-xl-6">
                                 <div class="d-flex flex-wrap flex-md-nowrap align-items-center gap-2">
-                                    <select class="w-100">
+                                    <select class="nice-select w-100">
                                         <option data-display="Select Services">Select Services</option>
                                         <option value="1">Digital Marketing</option>
                                         <option value="2">Graphics & Design</option>
@@ -290,13 +290,13 @@
                                         <option value="4">Business</option>
                                     </select>
                                     <span class="fs-7 ms-4 text-muted">From</span>
-                                    <select>
+                                    <select class="nice-select">
                                         <option data-display="Year">Year</option>
                                         <option value="1">2024</option>
                                         <option value="2">2023</option>
                                     </select>
                                     <span class="fs-7 ms-4 text-muted">To</span>
-                                    <select>
+                                    <select class="nice-select">
                                         <option data-display="Year">Year</option>
                                         <option value="1">2024</option>
                                         <option value="2">2023</option>
@@ -354,7 +354,7 @@
                                     <div class="type-1">
                                         <input type="text" placeholder="Type your Skills" class="form-control py-2"
                                             id="text">
-                                        <select class="w-100">
+                                        <select class="nice-select w-100">
                                             <option data-display="Language">Language</option>
                                             <option value="1">English</option>
                                             <option value="2">French</option>
@@ -386,7 +386,7 @@
                             <div class="col-lg-9">
                                 <div class="widget-box border rounded-3">
                                     <div class="type-2">
-                                        <select class="w-100">
+                                        <select class="nice-select w-100">
                                             <option data-display="Language">Language</option>
                                             <option value="1">English</option>
                                             <option value="2">French</option>
@@ -417,14 +417,14 @@
                                                 <option value="2">French</option>
                                                 <option value="3">Arabic</option>
                                             </select>
-                                            <select class="w-100 last-select">
+                                            <select class="nice-select w-100 last-select">
                                                 <option data-display="Language">Language</option>
                                                 <option value="1">English</option>
                                                 <option value="2">French</option>
                                                 <option value="3">Arabic</option>
                                             </select>
                                         </div>
-                                        <select>
+                                        <select class="nice-select">
                                             <option data-display="Year">Year</option>
                                             <option value="1">2024</option>
                                             <option value="2">2023</option>
@@ -460,13 +460,13 @@
                                             <option value="2">French</option>
                                             <option value="3">Arabic</option>
                                         </select>
-                                        <select class="w-100 last-select">
+                                        <select class="nice-select w-100 last-select">
                                             <option data-display="Language">Language</option>
                                             <option value="1">English</option>
                                             <option value="2">French</option>
                                             <option value="3">Arabic</option>
                                         </select>
-                                        <select>
+                                        <select class="nice-select">
                                             <option data-display="Year">Year</option>
                                             <option value="1">2024</option>
                                             <option value="2">2023</option>
@@ -680,7 +680,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 
     <script>
-        $("#smartwizard").smartWizard({
+        $("#personal-info-wizard").smartWizard({
             theme: "dots",
             justified: true,
             lang: {

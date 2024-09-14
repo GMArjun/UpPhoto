@@ -203,7 +203,7 @@ $('input[name="language"]').on("change", function () {
 });
 
 $(document).ready(function () {
-  $("select").niceSelect();
+  $(".nice-select").niceSelect();
 });
 
 function setDropdownHeight() {

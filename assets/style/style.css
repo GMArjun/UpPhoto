@@ -1766,52 +1766,105 @@ main {
   color: var(--color-primary);
 }
 
-#smartwizard {
+.personal-info-wizard-style {
   padding-bottom: 20px;
 }
 
-#smartwizard .nav-progress {
+.personal-info-wizard-style .nav-progress {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
 }
 
-#smartwizard .nav-progress .nav-item .nav-link {
+.personal-info-wizard-style .nav-progress .nav-item .nav-link {
   text-wrap: nowrap;
 }
 
-#smartwizard .nav-progress .nav-item .nav-link.default.done {
+.personal-info-wizard-style .nav-progress .nav-item .nav-link.default.done {
   color: var(--color-primary);
   font-weight: 600;
 }
 
-#smartwizard .nav-progress .nav-item .nav-link .num {
+.personal-info-wizard-style .nav-progress .nav-item .nav-link .num {
   font-size: 1rem;
   font-family: "Libre Franklin";
   font-weight: normal;
 }
 
 @media (max-width: 640px) {
-  #smartwizard .nav-progress .nav-item .nav-link .num {
+  .personal-info-wizard-style .nav-progress .nav-item .nav-link .num {
     top: 2px;
   }
 }
 
-#smartwizard .toolbar-bottom {
+.personal-info-wizard-style .toolbar-bottom {
   padding: 0px;
   text-align: left;
 }
 
-#smartwizard .toolbar-bottom .sw-btn-next {
+.personal-info-wizard-style .toolbar-bottom .sw-btn-next {
   min-width: 150px;
 }
 
-#smartwizard table thead tr th {
+.personal-info-wizard-style table thead tr th {
   background-color: #f2f2f2;
 }
 
-#smartwizard table th {
+.personal-info-wizard-style table th {
   font-weight: 400;
+}
+
+.profile-draft-wizard-style {
+  padding-bottom: 20px;
+}
+
+.profile-draft-wizard-style .nav-progress {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.profile-draft-wizard-style .nav-progress .nav-item .nav-link {
+  text-wrap: nowrap;
+}
+
+.profile-draft-wizard-style .nav-progress .nav-item .nav-link.default.done {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.profile-draft-wizard-style .nav-progress .nav-item .nav-link .num {
+  font-size: 1rem;
+  font-family: "Libre Franklin";
+  font-weight: normal;
+}
+
+@media (max-width: 640px) {
+  .profile-draft-wizard-style .nav-progress .nav-item .nav-link .num {
+    top: 2px;
+  }
+}
+
+.profile-draft-wizard-style .toolbar-bottom {
+  padding: 0px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile-draft-wizard-style .toolbar-bottom .sw-btn-next {
+  min-width: 150px;
+}
+
+.profile-draft-wizard-style .toolbar-bottom .sw-btn-prev {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: var(--color-primary);
 }
 
 .nice-select {
@@ -1972,7 +2025,7 @@ hr {
 }
 
 .bg-lavendar {
-  background-color: #9747FF;
+  background-color: #9747ff;
 }
 
 .portfolio-image-uploader-input {
@@ -2128,7 +2181,7 @@ hr {
 }
 
 .seller-page .accordion:hover::before {
-  content: '';
+  content: "";
   background-color: var(--color-primary);
   height: 100%;
   width: 4px;
@@ -2151,7 +2204,7 @@ hr {
   margin-left: -1.6em;
 }
 
-.form-check .form-check-input:checked[type=checkbox] {
+.form-check .form-check-input:checked[type="checkbox"] {
   background-image: url(../img/icons/select_tick.svg);
   background-color: #fff;
   background-size: 12px;
@@ -2261,6 +2314,27 @@ hr {
 }
 
 .btn-primary-shade {
-  background-color: #E7F0FF;
+  background-color: #e7f0ff;
+}
+
+.selectize-control.multi .selectize-input .item {
+  background-color: #E0E0E0 !important;
+  color: #000;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  border: none;
+  padding: 4px 8px;
+}
+
+.selectize-control.multi .selectize-input .remove {
+  border-left: 0px;
+  margin-left: 0px;
+}
+
+.selectize-dropdown .active:not(.selected) {
+  background-color: #E0E0E0;
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */
