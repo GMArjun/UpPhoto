@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Upphoto</title>
+    <link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style/swiper-bundle.min.css" />
+    <link href="./assets/style/smart_wizard_all.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <link rel="stylesheet" href="./assets/style/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="py-3 position-sticky top-0">
+        <div class="container-xl px-4 px-xl-0">
+            <nav class="d-flex justify-content-between align-items-center">
+                <a href="#">
+                    <img src="./assets/img/logo.svg" class="logo" alt="logo" />
+                </a>
+
+                <div class="me-auto d-none d-md-flex gap-4">
+                    <a href="#" class="item-img">Dashboard</a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            My Business
+                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
+                        </a>
+                        <ul class="dropdown-menu px-3" aria-labelledby="exploreDropdown">
+                            <li><a class="dropdown-item px-0 text-secondary" href="#">Orders</a></li>
+                            <li><a class="dropdown-item px-0 text-secondary" href="#">Gigs</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item px-0 text-secondary" href="#">Category 3</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item px-0 text-secondary" href="#">Earnings</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="d-flex align-items-center flex-shrink-0">
+                    <div class="d-flex flex-shrink-0 align-items-center header-items gap-1 gap-md-2">
+                        <a href="#" class="item-img"><img src="./assets/img/icons/searchic.svg" alt=""></a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/message.svg" alt=""></a>
+                        <a href="#" class="item-img item-img-heart"><img src="./assets/img/icons/heart-fill.svg"
+                                alt=""></a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/question.svg" alt=""></a>
+                        <div class="dropdown ms-1 ms-md-3 profile-dropdown">
+                            <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://avatar.iran.liara.run/public/1" alt="User 1" class="avatar" />
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                                <li class="px-3 py-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://avatar.iran.liara.run/public/1" alt="User 1"
+                                            class="avatar me-3" style="width: 48px; height: 48px;" />
+                                        <div>
+                                            <h6 class="mb-0">John Doe</h6>
+                                            <small class="text-muted">john.doe@example.com</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="px-3 py-2">
+                                    <button class="btn btn-outline-primary w-100">Switch to Selling</button>
+                                </li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Post a Request</a></li>
+                                <li><a class="dropdown-item" href="#">Refer a Friend</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Become a seller</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Billing and payments</a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item d-flex justify-content-between align-items-center"
+                                        href="#">Invite your team <span class="tag">UpPhoto Pro</span></a></li>
+                                <li class="px-3">
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="btn btn-light p-1 d-md-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebar" aria-controls="sidebar">
+                        <img src="./assets/img/icons/hamburger-menu.svg" alt="menu" />
+                    </button>
+                </nav>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="container-xl px-4 px-xl-0">
+            <div class="profile-page">
+                <div class="row mt-0 mb-5 gy-5">
+                    <div class="col-lg-3">
+                        <div class="card">
+                            <div class="card-body text-center p-4">
+                                <div class="mb-3">
+                                    <div class="media d-flex align-items-center mb-4">
+                                        <img src="https://avatar.iran.liara.run/public/30" class="rounded-circle me-3"
+                                            width="48" height="48" alt="Reviewer Avatar">
+                                        <div class="media-body">
+                                            <h6 class="mt-0 mb-0">John Doe</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="d-flex gap-2">
+                                    <span class="me-auto text-secondary">My level</span> <span class="fs-7">Level
+                                        0</span>
+                                </p>
+
+                                <hr>
+                                <p class="d-flex gap-2">
+                                    <span class="me-auto text-secondary">Success score</span> <span
+                                        class="fs-7">-</span>
+                                </p>
+                                <p class="d-flex gap-2">
+                                    <span class="me-auto text-secondary">Rating</span> <span class="fs-7"><img
+                                            src="./assets/img/icons/star-filled.svg" alt="">-</span>
+                                </p>
+                                <p class="d-flex gap-2">
+                                    <span class="me-auto text-secondary">Response rate</span> <span
+                                        class="fs-7">-</span>
+                                </p>
+                                <a href="#" class="btn btn-outline-primary w-100">Go to level overview</a>
+                            </div>
+                        </div>
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <p class="d-flex gap-2 mb-0">
+                                    <span class="me-auto text-secondary">Earned in July</span> <span class="fs-7">US
+                                        $0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <p class="d-flex gap-2 mb-0">
+                                    <span class="me-auto text-secondary">Inbox</span> <a href="#"
+                                        class="fs-7 text-primary">View all</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="card">
+                            <div class="card-body px-3 py-3 flex-wrap gap-4 d-flex align-items-center">
+                                <span>Active orders -0 ($0)</span>
+                                <select name="" id="" class="nice-select w-auto ms-auto">
+                                    <option value="">Active orders (0)</option>
+                                    <option value="">Active</option>
+                                    <option value="">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-xl px-4 px-xl-0">
+
+            <div class="card card-tabs mt-4 bg-transparent border-0 border-bottom">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center gap-1 active" id="home-tab"
+                            data-bs-toggle="tab" data-bs-target="#active-gig" type="button" role="tab"
+                            aria-controls="active-gig" aria-selected="true">ACTIVE</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center gap-1" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#pending-approval" type="button" role="tab" aria-controls="pending-approval"
+                            aria-selected="false">PENDING APPROVAL</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center gap-1" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#pending-approval" type="button" role="tab" aria-controls="pending-approval"
+                            aria-selected="false">REQUIRES MODIFICATION</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center gap-1" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#pending-approval" type="button" role="tab" aria-controls="pending-approval"
+                            aria-selected="false">DRAFT <span
+                                class="badge text-bg-secondary rounded-circle">1</span></button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link d-flex align-items-center gap-1" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#pending-approval" type="button" role="tab" aria-controls="pending-approval"
+                            aria-selected="false">DENIED <span
+                                class="badge text-bg-secondary rounded-circle">1</span></button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#pending-approval" type="button" role="tab" aria-controls="pending-approval"
+                            aria-selected="false">PAUSED</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content mt-4" id="myTabContent">
+                <div class="tab-pane fade show active" id="active-gig" role="tabpanel" aria-labelledby="home-tab"
+                    tabindex="0">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="border-bottom">
+                                <p class="p-3 m-0"> PENDING APPROVAL</p>
+                            </div>
+                            <div class="p-3">
+                                <div class="overflow-auto">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="check1">
+                                                        <label class="form-check-label" for="check1"></label>
+                                                    </div>
+                                                </th>
+                                                <th scope="col text-muted text-center">GIG</th>
+                                                <th scope="col text-muted text-center" style="text-align: center;">
+                                                    IMPRESSIONS</th>
+                                                <th scope="col text-muted text-center" style="text-align: center;">
+                                                    CLICKS
+                                                </th>
+                                                <th scope="col text-muted text-center" style="text-align: center;">
+                                                    ORDERS
+                                                </th>
+                                                <th scope="col text-muted text-center" style="text-align: center;">
+                                                    CANCELLATIONS</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="check1">
+                                                        <label class="form-check-label" for="check1"></label>
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <img src="https://avatar.iran.liara.run/public/30"
+                                                            alt="Gig Image" class="rounded" height="45" width="45"
+                                                            style="object-fit: cover;">
+                                                        <div>
+                                                            <p class="text-muted mb-0 fs-7">Create 2d character
+                                                                animation,
+                                                                website theme animation</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">0</td>
+                                                <td class="text-center">0</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-outline-dark dropdown-toggle p-2 py-0"
+                                                            type="button" id="dropdownMenuButton"
+                                                            data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                        <ul class="dropdown-menu dropdown-menu-end"
+                                                            aria-labelledby="dropdownMenuButton">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                            <li><a class="dropdown-item" href="#">View Details</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pending-approval" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+                    Hello
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="my-5 pt-4 pb-4">
+            <div class="container-xl px-4 px-xl-0">
+                <div class="grid-links">
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Graphics and Design</a></li>
+                            <li><a href="#" class="nav-link mb-3">Digital Marketing</a></li>
+                            <li><a href="#" class="nav-link mb-3">Writing & Translation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Video & Animation</a></li>
+                            <li><a href="#" class="nav-link mb-3">Photography</a></li>
+                            <li><a href="#" class="nav-link">Music and Audio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Careers</a></li>
+                            <li><a href="#" class="nav-link mb-3">Press & News</a></li>
+                            <li><a href="#" class="nav-link mb-3">Partnerships</a></li>
+                            <li><a href="#" class="nav-link mb-3">Privacy Policy</a></li>
+                            <li><a href="#" class="nav-link mb-3">Terms of Service</a></li>
+                            <li><a href="#" class="nav-link">Intellectual Property Claims</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Help & Support</a></li>
+                            <li><a href="#" class="nav-link mb-3">Trust & Safety</a></li>
+                            <li><a href="#" class="nav-link mb-3">Selling on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Buying on Upphoto</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link">Upphoto Forum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Events</a></li>
+                            <li><a href="#" class="nav-link mb-3">Blog</a></li>
+                            <li><a href="#" class="nav-link mb-3">Forum</a></li>
+                            <li><a href="#" class="nav-link mb-3">Community Standards</a></li>
+                            <li><a href="#" class="nav-link mb-3">Podcast</a></li>
+                            <li><a href="#" class="nav-link">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col mb-3">
+                        <p class="fw-bold">Categories</p>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="nav-link mb-3">Upphoto Pro</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Studios</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Logo Maker</a></li>
+                            <li><a href="#" class="nav-link mb-3">Upphoto Guides</a></li>
+                            <li><a href="#" class="nav-link mb-3">Get Inspired</a></li>
+                            <li><a href="#" class="nav-link">ClearVoice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-xl px-4 px-xl-0 pb-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex gap-3 align-items-center justify-content-center justify-content-xl-start">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/img/logo.svg" alt="Upphoto Logo" />
+                        </a>
+                        <p class="mb-0">UpPhoto International Ltd. 2024</p>
+                    </div>
+                </div>
+                <div
+                    class="col-lg-6 text-center text-md-end d-flex justify-content-center justify-content-xl-end pt-xl-0 pt-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="Facebook"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/tiktok.svg" alt="Twitter" class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/twitter.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/printest.svg" alt="Twitter"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/insta.svg" alt="Instagram"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/facebook.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <img src="./assets/img/icons/social/linkedin.svg" alt="LinkedIn"
+                                        class="social-icon" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col pt-xl-0 pt-5">
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#languageModal">
+                                    <img src="./assets/img/icons/language.svg" alt="language" />Languages</a>
+
+                                <a href="#" class="nav-link d-inline-flex gap-1 align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#currencyModal">
+                                    <img src="./assets/img/icons/rupee.svg" alt="money" />INR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <script src="./assets/js/jquery.smartWizard.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+    <script>
+        $("#smartwizard").smartWizard({
+            theme: "dots",
+            justified: true,
+            lang: {
+                next: 'Continue',
+                previous: 'Back'
+            },
+            toolbar: {
+                position: 'bottom', // none|top|bottom|both
+                showNextButton: true, // show/hide a Next button
+                showPreviousButton: false, // show/hide a Previous button
+            },
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.style.backgroundColor = '#FAFAFA';
+        });
+    </script>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

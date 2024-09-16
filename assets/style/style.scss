@@ -1932,12 +1932,11 @@ hr {
   background-color: #e7f0ff;
 }
 
-
-.selectize-control{
-  &.multi{
-    .selectize-input{
-      .item{
-        background-color: #E0E0E0 !important;
+.selectize-control {
+  &.multi {
+    .selectize-input {
+      .item {
+        background-color: #e0e0e0 !important;
         color: #000;
         background-image: none;
         box-shadow: none;
@@ -1945,7 +1944,7 @@ hr {
         border: none;
         padding: 4px 8px;
       }
-      .remove{
+      .remove {
         border-left: 0px;
         margin-left: 0px;
       }
@@ -1953,7 +1952,18 @@ hr {
   }
 }
 
-.selectize-dropdown .active:not(.selected){
-  background-color: #E0E0E0;
+.selectize-dropdown .active:not(.selected) {
+  background-color: #e0e0e0;
   color: #000;
+}
+
+.tab-content {
+  table {
+    th {
+      font-weight: normal !important;
+    }
+    td {
+      vertical-align: middle;
+    }
+  }
 }
