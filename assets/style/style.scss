@@ -1967,3 +1967,35 @@ hr {
     }
   }
 }
+
+.pagination{
+  gap: 16px;
+  li{
+    a{
+      border: none !important;
+      box-shadow: none !important;
+      color: #000 !important;
+      font-size: 18px;
+      width: 36px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    &.active{
+      a{
+        background-color: #E0E0E0;
+      }
+    }
+  }
+  .prev-btn, .next-btn{
+    a{
+      background-color: #fff;
+      border: 1px solid #E0E0E0 !important;
+      border-radius: 4px !important;
+      width: 40px !important;
+      text-align: center;
+    }
+    &.disabled{
+      opacity: 0.3 !important;
+    }
+  }
+}
