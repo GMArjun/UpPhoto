@@ -22,21 +22,28 @@
                     <img src="./assets/img/logo.svg" class="logo" alt="logo" />
                 </a>
 
-                <div class="input-group d-none d-md-flex">
-                    <input type="text" class="form-control" placeholder="What service you are looking for today?"
-                        aria-label="What service you are looking for today?" aria-describedby="button-search" />
-                    <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
-                        Search
-                    </button>
+                <div class="me-auto d-none d-md-flex gap-4">
+                    <a href="#" class="item-img">Dashboard</a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button" id="exploreDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            My Business
+                            <img src="./assets/img/icons/icon-down.svg" alt="arrow-down" />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
+                            <li><a class="dropdown-item" href="#">Category 1</a></li>
+                            <li><a class="dropdown-item" href="#">Category 2</a></li>
+                            <li><a class="dropdown-item" href="#">Category 3</a></li>
+                        </ul>
+                    </div>
                 </div>
-
                 <nav class="d-flex align-items-center flex-shrink-0">
                     <div class="d-flex flex-shrink-0 align-items-center header-items gap-1 gap-md-2">
-                        <a href="#" class="item-img"><img src="./assets/img/icons/notification.svg" alt=""></a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/searchic.svg" alt=""></a>
                         <a href="#" class="item-img"><img src="./assets/img/icons/message.svg" alt=""></a>
                         <a href="#" class="item-img item-img-heart"><img src="./assets/img/icons/heart-fill.svg"
                                 alt=""></a>
-                        <a href="#" class="d-none d-md-flex">Orders</a>
+                        <a href="#" class="item-img"><img src="./assets/img/icons/question.svg" alt=""></a>
                         <div class="dropdown ms-1 ms-md-3 profile-dropdown">
                             <a class="dropdown-toggle" data-bs-offset="0,14" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,132 +100,7 @@
                 </nav>
             </nav>
         </div>
-        <div class="container-xl px-4 px-xl-0 pt-3 d-flex d-md-none">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="What service you are looking for today?"
-                    aria-label="What service you are looking for today?" aria-describedby="button-search" />
-                <button class="btn btn-primary p-3 fw-bold" type="button" id="button-search">
-                    Search
-                </button>
-            </div>
-        </div>
     </header>
-
-
-    <div class="category-slider d-none d-md-flex">
-        <div class="container-xl px-5 position-relative">
-            <button class="btn border-0 swiper-button-prev-category-nav"">
-                <img src=" ./assets/img/icons/chevron-left.svg" alt="chevron-left" />
-            </button>
-            <button class="btn border-0 swiper-button-next-category-nav">
-                <img src="./assets/img/icons/chevron-right.svg" alt="chevron-right" />
-            </button>
-            <div class="swiper category-nav-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="dropdown">
-                            <div class="category-item" data-bs-offset="0,18" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Writing & Translation
-                            </div>
-                            <ul class="dropdown-menu font-libre-franklin" id="gig-menu-dropdown">
-                                <div class="row">
-                                    <div class="col-4 d-flex flex-column gap-4">
-                                        <div class="d-flex flex-column gap-3">
-                                            <p class="mb-0 fw-bold">Art & Illustration</p>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                        </div>
-                                        <div class="d-flex flex-column gap-3">
-                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 d-flex flex-column gap-4">
-                                        <div class="d-flex flex-column gap-3">
-                                            <p class="mb-0 fw-bold">Art & Illustration</p>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                        </div>
-                                        <div class="d-flex flex-column gap-3">
-                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-4 d-flex flex-column gap-4">
-                                        <div class="d-flex flex-column gap-3">
-                                            <p class="mb-0 fw-bold">Art & Illustration</p>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                        </div>
-                                        <div class="d-flex flex-column gap-3">
-                                            <p class="mb-0 fw-bold">Logo & Brand Identity</p>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Illustration</a>
-                                            <a class="dropdown-item" href="#">AI Artists</a>
-                                            <a class="dropdown-item" href="#">Children's Book Illustration</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Video & Animation</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Allow</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Programming & Tech</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Business</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Lifestyle</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Video & Animation</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Music & Audio</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Programming & Tech</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Business</div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="category-item">Lifestyle</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Language Modal -->
     <div class="modal fade" id="editNameModal" tabindex="-1" aria-labelledby="editNameModalLabel" aria-hidden="true">

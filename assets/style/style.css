@@ -927,7 +927,6 @@ main {
 
 .main-info {
   border: none;
-  background-image: url("../img/category/card-banner.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
