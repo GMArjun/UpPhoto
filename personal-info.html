@@ -530,7 +530,7 @@
                                     <h6 class="mb-0">Phone number</h6>
                                     <i class="fs-7 text-muted">Private</i>
                                 </div>
-                                <p class="text-muted mt-1 fs-7">We’ll never share your phone number.</p>
+                                <p class="text-muted mt-1 fs-7">We'll never share your phone number.</p>
                             </div>
                             <div class="col-lg-9">
                                 <div class="d-flex justify-content-end">
@@ -688,15 +688,49 @@
                 previous: 'Back'
             },
             toolbar: {
-                position: 'bottom', // none|top|bottom|both
-                showNextButton: true, // show/hide a Next button
-                showPreviousButton: false, // show/hide a Previous button
+                position: 'bottom',
+                showNextButton: true,
+                showPreviousButton: false,
             },
             anchor: {
-                unDoneOnBackNavigation: true, // While navigate back, done state will be cleared
+                unDoneOnBackNavigation: true,
             },
+        }).on("showStep", function(e, anchorObject, stepNumber, stepDirection) {
+            // Check if we're on the last step
+            if (stepNumber === 2) {
+                $('.sw-btn-next')
+                    .text('Finish')
+                    .prop('disabled', false)
+                    .removeClass('disabled');
+            } else {
+                $('.sw-btn-next').text('Continue');
+            }
+        }).on("stepContent", function(e, anchorObject, stepNumber, stepDirection) {
+            // This event is triggered after step content is loaded
+            if (stepNumber === 2) {
+                // We're on the last step, ensure the button is enabled
+                $('.sw-btn-next')
+                    .prop('disabled', false)
+                    .removeClass('disabled');
+            }
         });
 
+        // Add click event listener for the 'Finish' button
+        $(document).on('click', '.sw-btn-next:contains("Finish")', function(e) {
+            e.preventDefault();
+            // Add your custom finish action here
+            console.log('Finish button clicked!');
+            // For example, you could submit a form or perform any other action
+        });
+
+        // Additional code to ensure the button stays enabled
+        setInterval(function() {
+            if ($('.sw-btn-next').text() === 'Finish') {
+                $('.sw-btn-next')
+                    .prop('disabled', false)
+                    .removeClass('disabled');
+            }
+        }, 100);
     </script>
 
     <script src="./assets/js/jquery.flexdatalist.min.js"></script>
