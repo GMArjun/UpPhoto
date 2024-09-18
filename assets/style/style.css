@@ -1932,8 +1932,16 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 42px;
+  -webkit-column-gap: 42px;
+          column-gap: 42px;
   border: none;
+}
+
+@media (max-width: 767px) {
+  .card-tabs .nav-tabs {
+    -webkit-column-gap: 42px;
+            column-gap: 42px;
+  }
 }
 
 .card-tabs .nav-link {
@@ -2192,24 +2200,40 @@ hr {
   background-color: var(--color-background-gray);
 }
 
-.form-check {
+.form-check:not(.form-switch) {
   cursor: pointer;
 }
 
-.form-check .form-check-input {
+.form-check:not(.form-switch) .form-check-input {
   height: 18px;
   width: 18px;
   margin-top: 3px;
   margin-left: -1.6em;
 }
 
-.form-check .form-check-input:checked[type="checkbox"] {
+.form-check:not(.form-switch) .form-check-input:checked[type="checkbox"] {
   background-image: url(../img/icons/select_tick.svg);
   background-color: #fff;
   background-size: 12px;
 }
 
-.form-check .form-check-label {
+.form-check:not(.form-switch) .form-check-label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form-switch.form-switch .form-check-input {
+  height: 26px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.form-switch.form-switch .form-check-label {
+  margin-top: 4px;
+  margin-left: 10px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;

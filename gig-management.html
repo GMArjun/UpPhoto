@@ -185,8 +185,14 @@
 
 
         <div class="container-xl px-4 px-xl-0">
-            <h2 class="fw-normal">Gigs</h2>
-            <div class="card card-tabs mt-4 bg-transparent border-0 border-bottom">
+            <div class="d-flex align-items-center justify-content-between gap-2">
+                <h2 class="fw-normal mb-0">Gigs</h2>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Accepting Custom Orders</label>
+                  </div>
+            </div>
+            <div class="card card-tabs mt-4 bg-transparent border-0 border-bottom flex-row">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link d-flex align-items-center gap-1 active" id="home-tab"
@@ -222,6 +228,7 @@
                             aria-selected="false">PAUSED</button>
                     </li>
                 </ul>
+                <button class="btn btn-primary ms-auto align-self-center py-2 flex-shrink-0 w-100" style="max-width: 204px;">Create a gig</button>
             </div>
 
             <div class="tab-content mt-4" id="myTabContent">

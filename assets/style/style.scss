@@ -1648,8 +1648,11 @@ hr {
   padding: 0px 24px;
   .nav-tabs {
     display: flex;
-    gap: 42px;
+    column-gap: 42px;
     border: none;
+    @media (max-width: $breakpoint-md) {
+      column-gap: 42px;
+    }
   }
   .nav-link {
     padding: 19px 0px;
@@ -1849,7 +1852,7 @@ hr {
   background-color: var(--color-background-gray);
 }
 
-.form-check {
+.form-check:not(.form-switch) {
   cursor: pointer;
   .form-check-input {
     height: 18px;
@@ -1867,6 +1870,21 @@ hr {
     user-select: none;
   }
 }
+
+.form-switch.form-switch {
+  .form-check-input {
+    height: 26px;
+    width: 48px;
+    cursor: pointer;
+  }
+  .form-check-label{
+    margin-top: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
 
 .widget-box {
   padding: 10px;
