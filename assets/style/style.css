@@ -2084,7 +2084,7 @@ hr {
           justify-content: center;
 }
 
-.seller-template-img img {
+.seller-template-img img, .seller-template-img video {
   max-width: 550px;
   width: 100%;
   border-radius: 8px;
