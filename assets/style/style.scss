@@ -1559,7 +1559,12 @@ main {
 
 .profile-draft-wizard-style {
   padding-bottom: 20px;
+  nav{
+    position: absolute;
+    top: 3px;
+  }
   .nav-progress {
+    left: 100px;
     max-width: max-content;
     .nav-item {
       .nav-link {
