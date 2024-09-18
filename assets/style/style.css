@@ -2361,18 +2361,57 @@ hr {
 }
 
 .pagination li.active a {
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
 }
 
-.pagination .prev-btn a, .pagination .next-btn a {
+.pagination .prev-btn a,
+.pagination .next-btn a {
   background-color: #fff;
-  border: 1px solid #E0E0E0 !important;
+  border: 1px solid #e0e0e0 !important;
   border-radius: 4px !important;
   width: 40px !important;
   text-align: center;
 }
 
-.pagination .prev-btn.disabled, .pagination .next-btn.disabled {
+.pagination .prev-btn.disabled,
+.pagination .next-btn.disabled {
   opacity: 0.3 !important;
+}
+
+.filter-dropdown {
+  text-wrap: nowrap;
+}
+
+.filter-dropdown > .btn {
+  border: 1px solid #e3e3e3;
+  text-align: left;
+  font-weight: normal;
+  border-radius: 4px;
+  padding-right: 38px;
+}
+
+.filter-dropdown > .btn.show {
+  border-color: var(--color-black);
+}
+
+.filter-dropdown > .btn::after {
+  border: none;
+  background-image: url("../img/icons/icon-down.svg");
+  background-repeat: no-repeat;
+  -webkit-transform: none !important;
+          transform: none !important;
+  background-size: 12px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 16px;
+  top: 18px;
+}
+
+.filter-dropdown .dropdown-menu {
+  border: none;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
 }
 /*# sourceMappingURL=style.css.map */
