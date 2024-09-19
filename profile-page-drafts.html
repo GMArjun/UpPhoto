@@ -15,6 +15,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
         integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
     <link rel="stylesheet" href="./assets/style/style.css" />
 </head>
 
@@ -213,7 +214,9 @@
                                     <p class="text-muted mb-3">Select at most 4</p>
                                     <div class="row">
                                         <div class="col-6">
-                                            <select name="" id="industry-select" multiple>
+                                            <select data-placeholder="Choose a country..." multiple
+                                                class="chosen-select w-100">
+
                                                 <option value="">Select Category</option>
                                                 <option value="1">Category 1</option>
                                                 <option value="2">Category 2</option>
@@ -631,20 +634,10 @@
         integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
     <script>
-        $(function () {
-            $("#industry-select").selectize({
-                plugins: ['remove_button'],
-                delimiter: ',',
-                persist: false,
-                create: function (input) {
-                    return {
-                        value: input,
-                        text: input
-                    }
-                }
-            });
-        });
+        $(".chosen-select").chosen({ no_results_text: "Oops, nothing found!" }); 
     </script>
 
     <script src="./assets/js/main.js"></script>
