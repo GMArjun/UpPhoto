@@ -199,7 +199,21 @@
                                     <p class="text-muted mb-3">Select at most 4</p>
                                     <div class="row">
                                         <div class="col-6">
-                                            <select name="" id="" multiple class="select-category">
+                                            <select name="" class="nice-select w-100">
+                                                <option value="">Select Category</option>
+                                                <option value="1">Category 1</option>
+                                                <option value="2">Category 2</option>
+                                                <option value="3">Category 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-5 pb-5">
+                                    <h5 class="mb-0">Project category</h5>
+                                    <p class="text-muted mb-3">Select at most 4</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <select name="" id="industry-select" multiple>
                                                 <option value="">Select Category</option>
                                                 <option value="1">Category 1</option>
                                                 <option value="2">Category 2</option>
@@ -619,7 +633,7 @@
 
     <script>
         $(function () {
-            $(".select-category").selectize({
+            $("#industry-select").selectize({
                 plugins: ['remove_button'],
                 delimiter: ',',
                 persist: false,
